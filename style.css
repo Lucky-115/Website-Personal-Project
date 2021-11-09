@@ -1,0 +1,1033 @@
+body
+{
+	height: 100%;
+	margin: 0;
+    background-color: #16085b;
+}
+
+footer
+{
+	position: fixed;
+	bottom: 0;
+}
+
+header
+{
+    height:10%;
+    width:100%;
+   
+}
+
+main {
+  width:100%;
+  height: 100%;
+}
+
+.desktopTopBar
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.desktopTopBar li 
+{
+  float: left;
+}
+
+.desktopTopBar li a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.desktopTopBar li a:hover
+{
+    background-color:#111;
+    
+}
+
+.settingsclass
+{
+    float:right;
+    background:white;
+    border: 2px solid red;
+}
+
+.settingsclass input
+{
+    display:inline-block;
+    height:2.1875rem;
+}
+
+aside
+{
+    background:grey;
+    float:left;
+}
+.tables
+{
+    font-size:1.75rem;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /* this changes fonts of japanese characters to the right ones*/
+    width:100%;
+    height:100%;
+    color:#ffffff;
+    background:#000066;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td
+{
+    border: 1px solid black;
+}
+
+td:hover {
+  background:#4169E1;
+}
+.button
+{
+    background:#145C9E;
+    color:white;
+    font-size: 2.1875rem;
+    text-align: center;
+    width:12.25rem;
+    height:12.25rem;
+    float:left;
+    display:block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.2s;
+}
+
+.button:hover
+{
+   background:#0818A8;
+    color:white; 
+}
+
+.grid-container
+{
+    display:none;
+    width:25%;
+    margin:auto;
+    grid-template-columns: 1fr 1fr;
+    align-items:stretch;
+}
+.grid-container1
+{
+    display:grid;
+    width:50%;
+    height:21.875rem;
+    margin:auto;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid red;
+    grid-column-gap: 5%;
+}
+
+
+.grid-child
+{
+    border:none;
+}
+
+
+.button1
+{
+    background-color:#145C9E;
+    color:white;
+    font-size: 1.75rem;
+    text-align: center;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.3s;
+}
+.button1:hover
+{
+    background-color:#14729e;
+    color:white;
+}
+.button2
+{
+    
+    background-color:#145C9E;
+    color:white;
+    text-align: center;
+    font-size: 1.75rem;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.3s;
+}
+.button2:hover
+{
+    background-color:#14729e;
+    color:white;
+}
+.button3
+{
+    background-color:#145C9E;
+    color:white;  
+    text-align: center;
+    font-size: 1.75rem;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.3s;
+}
+.button3:hover
+{
+    background-color:#14729e;
+    color:white;
+}
+.button4
+{
+    background-color:#145C9E;
+    color:white;   
+    text-align: center;
+    font-size: 1.75rem;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.3s;
+}
+.button4:hover
+{
+    background-color:#14729e;
+    color:white;
+}
+
+.active
+{
+    background-color:crimson;
+}
+.active:hover
+{
+    background-color: crimson;
+    
+}
+
+.BigCharacter
+{
+    text-align:center;
+    font-size: 4.375rem;
+    color:white;
+    margin:auto;
+    width:25%;
+    border: 3px solid green;
+}
+
+.Counter
+{
+    color:white;
+}
+
+.SideBar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 2.28125rem; 
+  transition: 0.5s; 
+}
+
+.SideBar input
+{
+  padding: 0.4375rem 0.4375rem 0.4375rem 1.75rem;
+  text-decoration: none;
+  font-size: 1.35625rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.SideBar input:hover
+{
+    color: #f1f1f1;
+}
+
+.SideBar a
+{
+  padding: 0.4375rem 0.4375rem 0.4375rem 1.75rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.SideBar .CloseButton
+{
+  
+  position: absolute;
+  top: 0;
+  right: 1.3125rem;
+  font-size: 2,625rem;
+  margin-left: 3.5rem;
+  cursor:pointer;
+}
+
+.SideBar .CloseButton:hover
+{
+    color: #f1f1f1;
+}
+
+.RadioContainer
+{
+  display:block;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.21875rem;
+  margin-left: 1rem;
+  color:white;
+  cursor: pointer;
+  font-size: 1.75rem;
+  -webkit-user-select: none; /* this part makes it so that the text can't be highlighted, versions for different browsers*/
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.RadioContainer input /*makes the default radio button disappear*/
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.styledRadio           /*styles the new radio button*/ 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.RadioContainer:hover input ~ .styledRadio  /* these two change colors of the styled radio button */
+{
+  background-color: #808080;
+}
+
+.RadioContainer input:checked ~ .styledRadio 
+{
+  background-color: #2e9bf2;
+}
+
+.styledRadio:after  /*creates dot in the styled radio button*/ 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.RadioContainer input:checked ~ .styledRadio:after /*makes the dot appear when the styled radio button is checked*/
+{
+  display: block;
+}
+
+.RadioContainer .styledRadio:after 
+{
+  top: 0.7rem;
+  left: 0.7rem;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.bigButtonContainer
+{
+    display:block;
+    width:36.75rem;
+    height:12.25rem;
+    margin:auto;
+}
+.testSettingsButton
+{
+    display:block;
+    height:12.25rem;
+    width:12.25rem;
+    float:left;
+    background:#145C9E;
+    transition-duration:0.2s;
+}
+
+.bigButtonContainer .testSettingsButton:hover
+{
+    background:#0818A8;
+}
+
+.infoButton
+{
+    background:#145C9E;
+    color:white;
+    font-size: 8.75rem;
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    width:12.25rem;
+    height:12.25rem;
+    float:left;
+    display:block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.2s;
+}
+
+.infoButton:hover
+{
+   background:#0818A8;
+    color:white; 
+}
+
+
+
+.mobileTopBar 
+{
+  display:none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.mobileTopBar li 
+{
+  float: left;
+}
+
+.mobileTopBar li a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.mobileTopBar li a:hover
+{
+    background-color:#111;
+    
+}
+
+/*.rightAnsCheck-Parent {
+  z-index: 2;
+  position:relative;
+  float: right;
+  height: 0;
+  width: 75%;
+  border: 2px green solid;
+}*/
+
+.rightAnsCheck {
+display:none;
+position:absolute;
+border-radius:50%;
+left: 40%;
+top: 15vw;
+width:16vw;
+height:16vw;
+z-index: 2;
+border: 2vw solid green;
+transition-duration: 1s;
+}
+
+.wrongAnsCheck {
+display:none;
+position:absolute;
+left: 40%;
+top:15vw;
+width:20vw;
+height:20vw;
+z-index: 2;
+}
+
+
+.fade-Out {
+animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+}
+
+}
+
+.desktopTopBar .openMTB {
+  display: block;
+  height: 100%;
+  float: right;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.desktopTopBar .openMTB:hover {
+  background: black;
+}
+
+.desktopTopBar .openMTB .hamburgerIconHolder {
+  display: block;
+  height: 2.1875rem;
+  padding-top: 0.575rem;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.275rem;
+}
+
+.hamburgerIconHolder > .line {
+  background-color: #292929;
+  height: 0.4rem;
+  display: block;
+  width: 2rem;
+  background: white;
+}
+.hamburgerIconHolder > .line + .line {
+  margin-top: 0.3rem;
+}
+
+/* MOBILE*/
+
+
+@media screen and (max-width: 480px) {
+  body
+  {
+    height: 100%;
+    margin: 0;
+      background-color: #16085b;
+  }
+  
+  footer
+  {
+    position: fixed;
+    bottom: 0;
+  }
+  
+  header
+  {
+      height:10%;
+      width:100%;
+     
+  }
+  
+  
+main {
+  width:100%;
+  height: 100%;
+}
+
+  
+  
+  .desktopTopBar
+  {
+    display:none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .desktopTopBar li 
+  {
+    float: left;
+  }
+  
+  .desktopTopBar li a 
+  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .desktopTopBar li a:hover
+  {
+      background-color:#111;
+      
+  }
+  
+  .settingsclass
+  {
+      float:right;
+      background:white;
+      border: 2px solid red;
+  }
+  
+  .settingsclass input
+  {
+      display:inline-block;
+      height:2.1875rem;
+  }
+  
+  aside
+  {
+      background:grey;
+      float:left;
+  }
+  .tables
+  {
+      font-size:1.75rem;
+      font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /* this changes fonts of japanese characters to the right ones*/
+      width:100%;
+      height:100%;
+      color:#ffffff;
+      background:#000066;
+      text-align: center;
+      border-collapse: collapse;
+  }
+  
+  td
+  {
+      border: 1px solid black;
+  }
+  
+  td:hover{
+    background:#4169E1;
+  } 
+  
+  .button
+  {
+      background:#145C9E;
+      color:white;
+      font-size: 2.1875rem;
+      text-align: center;
+      width:12.25rem;
+      height:12.25rem;
+      float:left;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.2s;
+  }
+  
+  .button:hover
+  {
+     background:#0818A8;
+      color:white; 
+  }
+  
+  .grid-container
+  {
+      display:none;
+      width:25%;
+      margin:auto;
+      grid-template-columns: 1fr 1fr;
+      align-items:stretch;
+  }
+  .grid-container1
+  {
+      display:grid;
+      width:50%;
+      height:21.875rem;
+      margin:auto;
+      grid-template-columns: 1fr 1fr;
+      border: 2px solid red;
+      grid-column-gap: 5%;
+  }
+  
+  
+  .grid-child
+  {
+      border:none;
+  }
+  
+  
+  .button1
+  {
+      background-color:#145C9E;
+      color:white;
+      font-size: 1.75rem;
+      text-align: center;
+      width:100%;
+      height:100%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.3s;
+  }
+  .button1:hover
+  {
+      background-color:#14729e;
+      color:white;
+  }
+  .button2
+  {
+      
+      background-color:#145C9E;
+      color:white;
+      text-align: center;
+      font-size: 1.75rem;
+      width:100%;
+      height:100%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.3s;
+  }
+  .button2:hover
+  {
+      background-color:#14729e;
+      color:white;
+  }
+  .button3
+  {
+      background-color:#145C9E;
+      color:white;  
+      text-align: center;
+      font-size: 1.75rem;
+      width:100%;
+      height:100%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.3s;
+  }
+  .button3:hover
+  {
+      background-color:#14729e;
+      color:white;
+  }
+  .button4
+  {
+      background-color:#145C9E;
+      color:white;   
+      text-align: center;
+      font-size: 1.75rem;
+      width:100%;
+      height:100%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.3s;
+  }
+  .button4:hover
+  {
+      background-color:#14729e;
+      color:white;
+  }
+  
+  .active
+  {
+      background-color:crimson;
+  }
+  .active:hover
+  {
+      background-color: crimson;
+      
+  }
+  
+  .BigCharacter
+  {
+      text-align:center;
+      font-size: 4.375rem;
+      color:white;
+      margin:auto;
+      width:25%;
+      border: 3px solid green;
+  }
+  
+  .Counter
+  {
+      color:white;
+  }
+  
+  .SideBar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 2.28125rem; 
+    transition: 0.5s; 
+  }
+  
+  .SideBar input
+  {
+    padding: 0.4375rem 0.4375rem 0.4375rem 1.75rem;
+    text-decoration: none;
+    font-size: 1.35625rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .SideBar input:hover
+  {
+      color: #f1f1f1;
+  }
+  
+  .SideBar a
+  {
+    padding: 0.4375rem 0.4375rem 0.4375rem 1.75rem;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .SideBar .CloseButton
+  {
+    
+    position: absolute;
+    top: 0;
+    right: 1.3125rem;
+    font-size: 2,625rem;
+    margin-left: 3.5rem;
+    cursor:pointer;
+  }
+  
+  .SideBar .CloseButton:hover
+  {
+      color: #f1f1f1;
+  }
+  
+  .RadioContainer
+  {
+    display:block;
+    position: relative;
+    padding-left: 2.1875rem;
+    margin-bottom: 0.21875rem;
+    color:white;
+    cursor: pointer;
+    font-size: 1.75rem;
+    -webkit-user-select: none; /* this part makes it so that the text can't be highlighted, versions for different browsers*/
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .RadioContainer input /*makes the default radio button disappear*/
+  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .styledRadio           /*styles the new radio button*/ 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .RadioContainer:hover input ~ .styledRadio  /* these two change colors of the styled radio button */
+  {
+    background-color: #808080;
+  }
+  
+  .RadioContainer input:checked ~ .styledRadio 
+  {
+    background-color: #2e9bf2;
+  }
+  
+  .styledRadio:after  /*creates dot in the styled radio button*/ 
+  {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .RadioContainer input:checked ~ .styledRadio:after /*makes the dot appear when the styled radio button is checked*/
+  {
+    display: block;
+  }
+  
+  .RadioContainer .styledRadio:after 
+  {
+    top: 0.7rem;
+    left: 0.7rem;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .bigButtonContainer
+  {
+      display:block;
+      width:36.75rem;
+      height:12.25rem;
+      margin:auto;
+  }
+  .testSettingsButton
+  {
+      display:inline-block;
+      height:12.25rem;
+      width:12.25rem;
+      float: left;
+      background:#145C9E;
+      transition-duration:0.2s;
+  }
+  
+  .bigButtonContainer .testSettingsButton:hover
+  {
+      background:#0818A8;
+  }
+  
+  .infoButton
+  {
+      background:#145C9E;
+      color:white;
+      font-size: 8.75rem;
+      font-family: "Times New Roman", serif;
+      text-align: center;
+      width:12.25rem;
+      height:12.25rem;
+      float: left;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-duration: 0.2s;
+  }
+  
+  .infoButton:hover
+  {
+     background:#0818A8;
+      color:white; 
+  }
+  
+  
+  
+  .mobileTopBar 
+  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .mobileTopBar li 
+  {
+    float: left;
+  }
+  
+  .mobileTopBar li a 
+  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .mobileTopBar li a:hover
+  {
+      background-color:#111;
+      
+  }
+}
+
+.desktopTopBar .openMTB {
+  display: block;
+  height: 100%;
+  float: right;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.desktopTopBar .openMTB:hover {
+  background: black;
+}
+
+.desktopTopBar .openMTB .hamburgerIconHolder {
+  display: block;
+  height: 2.1875rem;
+  padding-top: 0.575rem;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.275rem;
+}
+
+.hamburgerIconHolder > .line {
+  background-color: #292929;
+  height: 0.4rem;
+  display: block;
+  width: 2rem;
+  background: white;
+}
+.hamburgerIconHolder > .line + .line {
+  margin-top: 0.3rem;
+}
+
+.rightAnsCheck {
+  display:none;
+  position:absolute;
+  border-radius:50%;
+  left: 40%;
+  top: 15vw;
+  width:16vw;
+  height:16vw;
+  z-index: 2;
+  border: 2vw solid green;
+  transition-duration: 1s;
+  }
+  
+  .wrongAnsCheck {
+  display:none;
+  position:absolute;
+  left: 40%;
+  top:15vw;
+  width:20vw;
+  height:20vw;
+  z-index: 2;
+  }
+  
+  
+  .fade-Out {
+  animation: fadeOut 1s;
+  }
+  
+  @keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+  
+  }
+  

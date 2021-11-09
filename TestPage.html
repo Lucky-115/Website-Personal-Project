@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>A</title>
+
+<meta name="description" content="content" />
+
+<meta name="keywords" content="keywords" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+<script type="text/javascript">
+
+const hiragana = [{name:"あ"},{name:"い"},{name:"う"},{name:"え"},{name:"お"},{name:"か"},{name:"き"},{name:"く"},{name:"け"},{name:"こ"},{name:"さ"},{name:"し"},{name:"す"},{name:"せ"},{ name:"そ"},{ name:"た"},{ name:"ち"},{ name:"つ"},{ name:"て"},{ name:"と"},{ name:"な"},{ name:"に"},{ name:"ぬ"},{ name:"ね"},{ name:"の"},{ name:"は"},{ name:"ひ"},{ name:"ふ"},{ name:"へ"},{ name:"ほ"},{ name:"ま"},{ name:"み"},{ name:"む"},{ name:"め"},{ name:"も"},{ name:"や"},{ name:"ゆ"},{ name:"よ"},{ name:"ら"},{ name:"り"},{ name:"る"},{ name:"れ"},{ name:"ろ"},{ name:"わ"},{ name:"を"},{ name:"ん"}];
+     
+
+//shuffle function
+function shuffle(hiragana) {
+  let currentIndex = hiragana.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [hiragana[currentIndex], hiragana[randomIndex]] = [
+      hiragana[randomIndex], hiragana[currentIndex]];
+  }
+  return hiragana;
+}
+  
+  
+//test start function
+function start() 
+{
+  document.getElementById("start").style.display="none"; //button responsible for starting the test disappears
+  shuffle(hiragana); //executes the shuffle function
+  document.getElementById("wynik").innerHTML= hiragana[0].name; //sets the div to the 0th index of the array
+  document.getElementById("odp").style.display="block"; //buttons responsible for losuj() function appears
+}
+  
+//actual function
+function losuj()
+{
+var questionnumber = 0; //states questionnumber
+
+   questionnumber = (questionnumber+1); //adds one to questionnumber
+   
+   for (let i = 0; i < questionnumber; i++) //loops shift() to avoid repeat characters
+  {
+    hiragana.shift(); //removes previously chosen objects
+  }
+  document.getElementById("wynik").innerHTML= hiragana[0].name; //sets the div.innerHTML to the 0th index of the array, which is now a different object because of shift()
+   
+}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+<header>
+
+</header>
+
+
+<main>
+<button id="start" onclick="start()">start test</button>
+</br>
+<button style="display:none;" id="odp" onclick="losuj()">odpowiedz</button>
+</br>
+<div id="wynik"></div>
+</main>
+
+
+<aside>
+
+</aside>
+
+
+<footer>
+
+</footer>
+
+
+</body>
+
+</html>
