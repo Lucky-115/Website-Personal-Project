@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <!--<link rel="stylesheet" media="screen and (max-width:480px)" href="styleMobile.css"/> -->
 <script type="text/javascript" src="TestScript.js"></script>
@@ -22,12 +22,11 @@
     
 <li><a href="LearningPage.html">Learn Characters</a></li>
     
-<li><a class="active">Test Your Knowledge</a></li>
+<li class="active"><a>Test Your Knowledge</a></li>
     
 <li><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
 <li><a href="InfoPage.html">More Info About Kana</a></li>
-<li class="settingsclass"><input type="image" src="mygear.png" href:"javascript:void(0)" onclick="Circle()" id="settings"></li>
  <li id="openMTB" class="openMTB">
     <div class="hamburgerIconHolder">
         <span class="line"></span>
@@ -37,36 +36,53 @@
  </li>    
 </ul>
 
-<script type="text/javascript">
-var a = 0;
-    function Circle() {
-        if (a == 0){
-document.getElementById("circle").style.display="block";
-a = 1;
-}
-        else if (a == 1) {
-           document.getElementById("circle").style.display="none";
-           a = 0;
-        }
-    }
-
-</script>
 
 
-
-<ul class="mobileTopBar">
-        <li><a href="HomePage.html">Home</a></li>
+<ul id="mobileTopBar" class="mobileTopBar">
+    <li id="openMTB" class="openMTB">
+        <div id="openTB" class="hamburgerIconHolder">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+     </li> 
+<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+<li id="li1" class="mobileLI"><a href="HomePage.html">Home</a></li>
     
-<li><a href="LearningPage.html">Learn Characters</a></li>
+<li id="li2" class="mobileLI"><a href="LearningPage.html">Learn Characters</a></li>
     
-<li><a class="active">Test Your Knowledge</a></li>
+<li id="li3" class="mobileLI"><a class="active">Test Your Knowledge</a></li>
     
-<li><a href="HistoryTriviaPage.html">History of Kana</a></li>
+<li id="li4" class="mobileLI"><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
-<li><a href="InfoPage.html">More Info About Kana</a></li>
-<li class="settingsclass"><input type="image" src="mygear.png" id="settings"></li>
+<li id="li5" class="mobileLI"><a href="InfoPage.html">More Info About Kana</a></li>
     </ul>
-        </header>
+
+<script type="text/javascript">
+document.getElementById("openTB").addEventListener("click", openMTB);
+var a = 0;
+function openMTB() {
+    if (a == 0) {
+document.getElementById("li1").style.display="block";
+document.getElementById("li2").style.display="block";
+document.getElementById("li3").style.display="block";
+document.getElementById("li4").style.display="block";
+document.getElementById("li5").style.display="block";
+document.getElementById("li6").style.display="block";
+a = 1;
+    }
+    else if (a == 1) {
+document.getElementById("li1").style.display="none";
+document.getElementById("li2").style.display="none";
+document.getElementById("li3").style.display="none";
+document.getElementById("li4").style.display="none";
+document.getElementById("li5").style.display="none";
+document.getElementById("li6").style.display="none";
+a = 0;
+    }
+}
+</script>
+</header>
 
 <main>
 <!--<div class="rightAnsCheck-Parent"></div>-->    
@@ -91,13 +107,125 @@ a = 1;
 <span class="styledRadio"></span>
     </label>    
 </br>
-    <label class="RadioContainer"> Romaji into Kana
-<input type="radio" id="SetTestRomajiToKana" name="kanaORroma" value="roma" />
-<span class="styledRadio"></span>
-     </label>
-    
+<label class="RadioContainer"> Romaji into Kana
+    <input type="radio" id="SetTestRomajiToKana" name="kanaORroma" value="roma" />
+    <span class="styledRadio"></span>
+</label>
+</br>
+<label class="checkboxContainer"> Select Rows
+        <input type="checkbox" id="customRowDropdown" name="cRowDrop" value="dropdownCustomRows" onclick="dropdownCustomRows()"/>
+        <span class="styledCheckbox1"></span>
+</label>
+<label id="rowLabel1" class="rowSelectCBContainer"> A
+    <input type="checkbox" id="rowA" name="cRow" value="A"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel2" class="rowSelectCBContainer"> KA
+    <input type="checkbox" id="rowKA" name="cRow" value="KA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel3" class="rowSelectCBContainer"> SA
+    <input type="checkbox" id="rowSA" name="cRow" value="SA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel4" class="rowSelectCBContainer"> TA
+    <input type="checkbox" id="rowTA" name="cRow" value="TA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel5" class="rowSelectCBContainer"> NA
+    <input type="checkbox" id="rowNA" name="cRow" value="NA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel6" class="rowSelectCBContainer"> HA
+    <input type="checkbox" id="rowHA" name="cRow" value="HA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel7" class="rowSelectCBContainer"> MA
+    <input type="checkbox" id="rowMA" name="cRow" value="MA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel8" class="rowSelectCBContainer"> YA
+    <input type="checkbox" id="rowYA" name="cRow" value="YA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel9" class="rowSelectCBContainer"> RA
+    <input type="checkbox" id="rowRA" name="cRow" value="RA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel10" class="rowSelectCBContainer"> WA
+    <input type="checkbox" id="rowWA" name="cRow" value="WA"/>
+    <span class="styledCheckbox"></span>
+</label>
+<label id="rowLabel11" class="rowSelectCBContainer"> N
+    <input type="checkbox" id="rowN" name="cRow" value="N"/>
+    <span class="styledCheckbox"></span>
+</label>
 </div>    
+<script type="text/javascript">
+    function dropdownCustomRows() {
+if (document.getElementById("customRowDropdown").checked == true) {
+    document.getElementById("rowLabel1").style.display="block";
+    document.getElementById("rowLabel2").style.display="block";
+    document.getElementById("rowLabel3").style.display="block";
+    document.getElementById("rowLabel4").style.display="block";
+    document.getElementById("rowLabel5").style.display="block";
+    document.getElementById("rowLabel6").style.display="block";
+    document.getElementById("rowLabel7").style.display="block";
+    document.getElementById("rowLabel8").style.display="block";
+    document.getElementById("rowLabel9").style.display="block";
+    document.getElementById("rowLabel10").style.display="block";
+    document.getElementById("rowLabel11").style.display="block";
 
+    document.getElementById("rowA").style.display="block";
+    document.getElementById("rowKA").style.display="block";
+    document.getElementById("rowSA").style.display="block";
+    document.getElementById("rowTA").style.display="block";
+    document.getElementById("rowNA").style.display="block";
+    document.getElementById("rowHA").style.display="block";
+    document.getElementById("rowMA").style.display="block";
+    document.getElementById("rowYA").style.display="block";
+    document.getElementById("rowRA").style.display="block";
+    document.getElementById("rowWA").style.display="block";
+    document.getElementById("rowN").style.display="block";
+
+    var elems = document.getElementsByClassName('styledCheckbox');
+for (var i=0;i<elems.length;i+=1){
+  elems[i].style.display = 'block';
+}
+
+}
+else if (document.getElementById("customRowDropdown").checked == false) {
+    document.getElementById("rowA").style.display="none";
+    document.getElementById("rowKA").style.display="none";
+    document.getElementById("rowSA").style.display="none";
+    document.getElementById("rowTA").style.display="none";
+    document.getElementById("rowNA").style.display="none";
+    document.getElementById("rowHA").style.display="none";
+    document.getElementById("rowMA").style.display="none";
+    document.getElementById("rowYA").style.display="none";
+    document.getElementById("rowRA").style.display="none";
+    document.getElementById("rowWA").style.display="none";
+    document.getElementById("rowN").style.display="none";
+
+    document.getElementById("rowLabel1").style.display="none";
+    document.getElementById("rowLabel2").style.display="none";
+    document.getElementById("rowLabel3").style.display="none";
+    document.getElementById("rowLabel4").style.display="none";
+    document.getElementById("rowLabel5").style.display="none";
+    document.getElementById("rowLabel6").style.display="none";
+    document.getElementById("rowLabel7").style.display="none";
+    document.getElementById("rowLabel8").style.display="none";
+    document.getElementById("rowLabel9").style.display="none";
+    document.getElementById("rowLabel10").style.display="none";
+    document.getElementById("rowLabel11").style.display="none";
+
+    var elems = document.getElementsByClassName('styledCheckbox');
+for (var i=0;i<elems.length;i+=1){
+  elems[i].style.display = 'none';
+}
+}
+    }
+</script>
 <div id="infoBar" class="SideBar">
 <a href:"javascript:void(0)" class="CloseButton" onclick="closeInfoBar()">&times;</a>
 
@@ -137,31 +265,22 @@ function closeInfoBar()
 
 
 
-<div id="grid" class="grid-container">
-    <div class="grid-child">
+<!--<div id="grid" class="grid-container"> -->
+    <!--<div class="grid-child"> -->
+<div class="answerContainer" id="answerContainer">
     <button class="button1" style="display:none;" id="option1" onclick="losuj();correct()">Correct Answer</button>
-    </div>
-    <div class="grid-child">
-    <button class="button2" style="display:none;" id="option2" onclick="losuj();incorrect()">Wrong Answer</button>
-    </div>   
-    <div class="grid-child">
+    <button class="button2" style="display:none;" id="option2" onclick="losuj();incorrect()">Wrong Answer</button>   
     <button class="button3" style="display:none;" id="option3" onclick="losuj();incorrect()">Wrong Answer</button>
-    </div>
-    <div class="grid-child">
     <button class="button4" style="display:none;" id="option4" onclick="losuj();incorrect()">Wrong Answer</button>
-    </div>
+    <!--</div> -->
 </div>
     
 </br>
 </br>
 
-<div id="answerstatus" style="display:none;"></div>
+<div id="answerstatus" style="display:none; color:white;"></div>
 
 <div class="counter" id="CounterQuestion"></div>
-
-<div style="width:7px; height:7px; border: 2px solid green"></div>
-<div style="width:1vh; height:1vh; border: 2px solid green"></div>
-<div style="width:1rem; height:1rem; border: 2px solid green"></div>
 </main>
 
 
@@ -178,5 +297,4 @@ aaaaaaaaaaaaaaaaaaaaaaaaa
 
 
 </body>
-
 </html>

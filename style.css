@@ -2,7 +2,8 @@ body
 {
 	height: 100%;
 	margin: 0;
-    background-color: #16085b;
+  /*background-color: #16085b;*/
+  background: #000080;
 }
 
 footer
@@ -29,7 +30,9 @@ main {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background:#28282B;
+  height: 100%;
+  /*background-color: #333;*/
 }
 
 .desktopTopBar li 
@@ -53,17 +56,16 @@ main {
     
 }
 
-.settingsclass
+.desktopTopBar .active a
 {
-    float:right;
-    background:white;
-    border: 2px solid red;
+    background-color:#00E8FC;
+    color:black;
 }
-
-.settingsclass input
+.desktopTopBar .active a:hover
 {
-    display:inline-block;
-    height:2.1875rem;
+    color:white;
+    background-color: #DE3C4B;
+    
 }
 
 aside
@@ -91,35 +93,18 @@ td
 td:hover {
   background:#4169E1;
 }
-.button
-{
-    background:#145C9E;
-    color:white;
-    font-size: 2.1875rem;
-    text-align: center;
-    width:12.25rem;
-    height:12.25rem;
-    float:left;
-    display:block;
-    border:none;
-    cursor:pointer;
-    transition-duration: 0.2s;
-}
 
-.button:hover
-{
-   background:#0818A8;
-    color:white; 
-}
 
-.grid-container
+/*.grid-container
 {
     display:none;
-    width:25%;
+    width:30%;
     margin:auto;
     grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
     align-items:stretch;
-}
+} */
 .grid-container1
 {
     display:grid;
@@ -137,102 +122,120 @@ td:hover {
     border:none;
 }
 
+.answerContainer {
+display: block;
+position: relative;
+width: 30rem;
+height: 30rem;
+margin: auto;
+}
 
 .button1
 {
-    background-color:#145C9E;
+    position: absolute;
+    background-color:#256EFF;
     color:white;
     font-size: 1.75rem;
     text-align: center;
-    width:100%;
-    height:100%;
+    width: 15rem;
+    height: 15rem;
+    left: -0.5rem;
     display:inline-block;
     border:none;
     cursor:pointer;
-    transition-duration: 0.3s;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    border-radius: 5%;
 }
 .button1:hover
 {
-    background-color:#14729e;
+    background-color: #00E8FC;
     color:white;
 }
 .button2
 {
     
-    background-color:#145C9E;
+    background-color:#256EFF;
+    position: absolute;
     color:white;
     text-align: center;
     font-size: 1.75rem;
-    width:100%;
-    height:100%;
+    left: 15.5rem;
+    width: 15rem;
+    height: 15rem;
     display:inline-block;
     border:none;
     cursor:pointer;
-    transition-duration: 0.3s;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    border-radius: 5%;
 }
 .button2:hover
 {
-    background-color:#14729e;
+    background-color: #00E8FC;
     color:white;
 }
 .button3
 {
-    background-color:#145C9E;
+    background-color:#256EFF;
+    position: absolute;
     color:white;  
     text-align: center;
     font-size: 1.75rem;
-    width:100%;
-    height:100%;
+    top: 16rem;
+    left: -0.5rem;
+    width:15rem;
+    height: 15rem;
     display:inline-block;
     border:none;
     cursor:pointer;
-    transition-duration: 0.3s;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    border-radius: 5%;
 }
 .button3:hover
 {
-    background-color:#14729e;
+    background-color: #00E8FC;
     color:white;
 }
 .button4
 {
-    background-color:#145C9E;
+    background-color:#256EFF;
+    position: absolute;
     color:white;   
     text-align: center;
     font-size: 1.75rem;
-    width:100%;
-    height:100%;
+    width: 15rem;
+    height: 15rem;
+    top: 16rem;
+    left: 15.5rem;
     display:inline-block;
     border:none;
     cursor:pointer;
-    transition-duration: 0.3s;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    border-radius: 5%;
 }
 .button4:hover
 {
-    background-color:#14729e;
+    background-color: #00E8FC;
     color:white;
 }
 
-.active
-{
-    background-color:crimson;
-}
-.active:hover
-{
-    background-color: crimson;
-    
-}
+
 
 .BigCharacter
 {
     text-align:center;
     font-size: 4.375rem;
+    background: black;
     color:white;
     margin:auto;
     width:25%;
     border: 3px solid green;
 }
 
-.Counter
+.counter
 {
     color:white;
 }
@@ -358,21 +361,170 @@ td:hover {
   background: white;
 }
 
+/* checkbox style*/
+
+.checkboxContainer
+{
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.21875rem;
+  margin-left: 1rem;
+  color:white;
+  cursor: pointer;
+  font-size: 1.75rem;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer input
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxContainer .styledCheckbox1        
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: #eee;
+}
+
+.checkboxContainer:hover input ~ .styledCheckbox1
+{
+  background-color: #808080;
+}
+
+.checkboxContainer input:checked ~ .styledCheckbox1
+{
+  background-color: #2e9bf2;
+}
+
+.styledCheckbox1:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .styledCheckbox1:after 
+{
+  display: block;
+}
+
+.checkboxContainer .styledCheckbox1:after 
+{
+  left: 0.625rem;
+  top: 0.325rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+ 
+/*lower checkboxes*/
+.rowSelectCBContainer
+{
+  display:none;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.21875rem;
+  margin-left: 3rem;
+  color:white;
+  cursor: pointer;
+  font-size: 1.75rem;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rowSelectCBContainer input
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.rowSelectCBContainer .styledCheckbox         
+{
+  display:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: #eee;
+}
+
+.rowSelectCBContainer:hover input ~ .styledCheckbox
+{
+  background-color: #808080;
+}
+
+.rowSelectCBContainer input:checked ~ .styledCheckbox
+{
+  background-color: #2e9bf2;
+}
+
+.styledCheckbox:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rowSelectCBContainer input:checked ~ .styledCheckbox:after 
+{
+  display: block;
+}
+
+.rowSelectCBContainer .styledCheckbox:after 
+{
+  left: 0.625rem;
+  top: 0.325rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*main menu buttons*/
+
 .bigButtonContainer
 {
     display:block;
-    width:36.75rem;
-    height:12.25rem;
+    width:49.5rem;
+    height:20.5rem;
     margin:auto;
+    margin-top:12rem;
 }
 .testSettingsButton
 {
     display:block;
-    height:12.25rem;
-    width:12.25rem;
+    height:15rem;
+    width:15rem;
     float:left;
-    background:#145C9E;
+    background:#00E8FC;
     transition-duration:0.2s;
+    border-radius: 5%;
+    margin-right: 1.5rem;
 }
 
 .bigButtonContainer .testSettingsButton:hover
@@ -382,18 +534,19 @@ td:hover {
 
 .infoButton
 {
-    background:#145C9E;
+    background:#00E8FC;
     color:white;
     font-size: 8.75rem;
     font-family: "Times New Roman", serif;
     text-align: center;
-    width:12.25rem;
-    height:12.25rem;
+    width:15rem;
+    height:15rem;
     float:left;
     display:block;
     border:none;
     cursor:pointer;
     transition-duration: 0.2s;
+    border-radius: 5%;
 }
 
 .infoButton:hover
@@ -401,7 +554,29 @@ td:hover {
    background:#0818A8;
     color:white; 
 }
+/*#4361EE*/
+.button
+{
+    background: #00E8FC;
+    color:white;
+    font-size: 2.1875rem;
+    text-align: center;
+    width:15rem;
+    height:15rem;
+    float:left;
+    display:block;
+    border:none;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    border-radius: 5%;
+    margin-right: 1.5rem;
+}
 
+.button:hover
+{
+   background:#0818A8;
+    color:white; 
+}
 
 
 .mobileTopBar 
@@ -414,10 +589,6 @@ td:hover {
   background-color: #333;
 }
 
-.mobileTopBar li 
-{
-  float: left;
-}
 
 .mobileTopBar li a 
 {
@@ -515,6 +686,7 @@ to {
   margin-top: 0.3rem;
 }
 
+
 /* MOBILE*/
 
 
@@ -523,7 +695,9 @@ to {
   {
     height: 100%;
     margin: 0;
-      background-color: #16085b;
+    width:100%;
+    max-width: 100%;
+    background-color: #16085b;
   }
   
   footer
@@ -534,14 +708,16 @@ to {
   
   header
   {
-      height:10%;
+      height:20%;
       width:100%;
-     
+      max-width: 100%;
+      display: block;
   }
   
   
 main {
   width:100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -578,18 +754,6 @@ main {
       
   }
   
-  .settingsclass
-  {
-      float:right;
-      background:white;
-      border: 2px solid red;
-  }
-  
-  .settingsclass input
-  {
-      display:inline-block;
-      height:2.1875rem;
-  }
   
   aside
   {
@@ -617,26 +781,7 @@ main {
     background:#4169E1;
   } 
   
-  .button
-  {
-      background:#145C9E;
-      color:white;
-      font-size: 2.1875rem;
-      text-align: center;
-      width:12.25rem;
-      height:12.25rem;
-      float:left;
-      display:inline-block;
-      border:none;
-      cursor:pointer;
-      transition-duration: 0.2s;
-  }
-  
-  .button:hover
-  {
-     background:#0818A8;
-      color:white; 
-  }
+
   
   .grid-container
   {
@@ -663,88 +808,108 @@ main {
       border:none;
   }
   
-  
-  .button1
-  {
-      background-color:#145C9E;
-      color:white;
-      font-size: 1.75rem;
-      text-align: center;
-      width:100%;
-      height:100%;
-      display:inline-block;
-      border:none;
-      cursor:pointer;
-      transition-duration: 0.3s;
-  }
-  .button1:hover
-  {
-      background-color:#14729e;
-      color:white;
-  }
-  .button2
-  {
-      
-      background-color:#145C9E;
-      color:white;
-      text-align: center;
-      font-size: 1.75rem;
-      width:100%;
-      height:100%;
-      display:inline-block;
-      border:none;
-      cursor:pointer;
-      transition-duration: 0.3s;
-  }
-  .button2:hover
-  {
-      background-color:#14729e;
-      color:white;
-  }
-  .button3
-  {
-      background-color:#145C9E;
-      color:white;  
-      text-align: center;
-      font-size: 1.75rem;
-      width:100%;
-      height:100%;
-      display:inline-block;
-      border:none;
-      cursor:pointer;
-      transition-duration: 0.3s;
-  }
-  .button3:hover
-  {
-      background-color:#14729e;
-      color:white;
-  }
-  .button4
-  {
-      background-color:#145C9E;
-      color:white;   
-      text-align: center;
-      font-size: 1.75rem;
-      width:100%;
-      height:100%;
-      display:inline-block;
-      border:none;
-      cursor:pointer;
-      transition-duration: 0.3s;
-  }
-  .button4:hover
-  {
-      background-color:#14729e;
-      color:white;
-  }
+  .answerContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    max-width:100%;
+    }
+    
+    .button1
+    {
+        background-color:#256EFF;
+        color:white;
+        font-size: 1.75rem;
+        text-align: center;
+        width: 50%;
+        height: 15rem;
+        display:inline-block;
+        border:none;
+        cursor:pointer;
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        border-radius: 5%;
+        max-width:100%;
+    }
+    .button1:hover
+    {
+        background-color: #00E8FC;
+        color:white;
+    }
+    .button2
+    {
+        
+        background-color:#256EFF;
+        color:white;
+        text-align: center;
+        font-size: 1.75rem;
+        width: 50%;
+        height: 15rem;
+        display:inline-block;
+        border:none;
+        cursor:pointer;
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        border-radius: 5%;
+        max-width:100%;
+    }
+    .button2:hover
+    {
+        background-color: #00E8FC;
+        color:white;
+    }
+    .button3
+    {
+        background-color:#256EFF;
+        color:white;  
+        text-align: center;
+        font-size: 1.75rem;
+        width:50%;
+        height: 15rem;
+        display:inline-block;
+        border:none;
+        cursor:pointer;
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        border-radius: 5%;
+        max-width:100%;
+    }
+    .button3:hover
+    {
+        background-color: #00E8FC;
+        color:white;
+    }
+    .button4
+    {
+        background-color:#256EFF;
+        color:white;   
+        text-align: center;
+        font-size: 1.75rem;
+        width: 50%;
+        height: 15rem;
+        display:inline-block;
+        border:none;
+        cursor:pointer;
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        border-radius: 5%;
+        max-width:100%;
+    }
+    .button4:hover
+    {
+        background-color: #00E8FC;
+        color:white;
+    }
   
   .active
   {
-      background-color:crimson;
+      background-color:#DE3C4B;
   }
   .active:hover
   {
-      background-color: crimson;
+      background-color: #DE3C4B;
       
   }
   
@@ -758,7 +923,7 @@ main {
       border: 3px solid green;
   }
   
-  .Counter
+  .counter
   {
       color:white;
   }
@@ -883,43 +1048,195 @@ main {
     background: white;
   }
   
-  .bigButtonContainer
+/* checkbox style*/
+
+.checkboxContainer
+{
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.21875rem;
+  margin-left: 1rem;
+  color:white;
+  cursor: pointer;
+  font-size: 1.75rem;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer input
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxContainer .styledCheckbox1        
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: #eee;
+}
+
+.checkboxContainer:hover input ~ .styledCheckbox1
+{
+  background-color: #808080;
+}
+
+.checkboxContainer input:checked ~ .styledCheckbox1
+{
+  background-color: #2e9bf2;
+}
+
+.styledCheckbox1:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .styledCheckbox1:after 
+{
+  display: block;
+}
+
+.checkboxContainer .styledCheckbox1:after 
+{
+  left: 0.625rem;
+  top: 0.325rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+ 
+/*lower checkboxes*/
+.rowSelectCBContainer
+{
+  display:none;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.21875rem;
+  margin-left: 3rem;
+  color:white;
+  cursor: pointer;
+  font-size: 1.75rem;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rowSelectCBContainer input
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.rowSelectCBContainer .styledCheckbox         
+{
+  display:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: #eee;
+}
+
+.rowSelectCBContainer:hover input ~ .styledCheckbox
+{
+  background-color: #808080;
+}
+
+.rowSelectCBContainer input:checked ~ .styledCheckbox
+{
+  background-color: #2e9bf2;
+}
+
+.styledCheckbox:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rowSelectCBContainer input:checked ~ .styledCheckbox:after 
+{
+  display: block;
+}
+
+.rowSelectCBContainer .styledCheckbox:after 
+{
+  left: 0.625rem;
+  top: 0.325rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.bigButtonContainer
   {
       display:block;
-      width:36.75rem;
-      height:12.25rem;
-      margin:auto;
+      width:75%;
+      max-width: 100%;
+      height:auto;
+      margin-top: 0;
   }
-  .testSettingsButton
+.testSettingsButton
   {
-      display:inline-block;
-      height:12.25rem;
-      width:12.25rem;
+      display:block;
+      width:100%;
+      max-width: 100%;
+      height:auto;
       float: left;
       background:#145C9E;
       transition-duration:0.2s;
+      margin: 0 0 0 0;
+      border-radius: 5%;
   }
   
-  .bigButtonContainer .testSettingsButton:hover
+.bigButtonContainer .testSettingsButton:hover
   {
       background:#0818A8;
   }
   
-  .infoButton
+.infoButton
   {
       background:#145C9E;
       color:white;
-      font-size: 8.75rem;
+      font-size: 20rem;
       font-family: "Times New Roman", serif;
       text-align: center;
-      width:12.25rem;
-      height:12.25rem;
+      width:100%;
+      max-width: 100%;
+      height:20rem;
       float: left;
-      display:inline-block;
+      display:block;
       border:none;
       cursor:pointer;
       transition-duration: 0.2s;
-  }
+      line-height: 100%;
+      margin: 1rem 0 0 0;
+      border-radius: 5%;
+}
+  
   
   .infoButton:hover
   {
@@ -927,52 +1244,104 @@ main {
       color:white; 
   }
   
-  
+  .button
+  {
+  background:#145C9E;
+  color:white;
+  font-size: 2.1875rem;
+  text-align: center;
+  width:100%;
+  max-width: 100%;
+  height:20rem;
+  float:left;
+  display:block;
+  border:none;
+  cursor:pointer;
+  transition-duration: 0.2s;
+  margin: 1rem 0 0 0;
+  border-radius: 5%;
+  }
+
+  .button:hover
+  {
+     background:#0818A8;
+      color:white; 
+  }
   
   .mobileTopBar 
   {
+    display: block;
+    max-width: 100%;
+    max-width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #28282B;
   }
   
-  .mobileTopBar li 
+  .mobileTopBar .mobileLI 
   {
+    display:none;
     float: left;
+    width: 100%;
+    max-width: 100%;
   }
   
-  .mobileTopBar li a 
+  .mobileTopBar .mobileLI a 
   {
     display: block;
+    width: 100%;
+    max-width: 100%;
     color: white;
     text-align: center;
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 0 0.875rem 0;
     text-decoration: none;
     transition-duration: 0.2s;
   }
+
+.settingsclass
+  {
+      display:none;
+      margin: auto;
+      height: 2.75rem;
+      width: 2.75rem;
+      max-width: 100%;
+      float: left;
+  }
   
-  .mobileTopBar li a:hover
+  .settingsclass input
+  {
+      display:inline-block;
+      height:2.75rem;
+  }
+  
+  .mobileTopBar .mobileLI a:hover
+  {
+      background-color:#111;
+      
+  }
+  .mobileTopBar .settingsclass input:hover
   {
       background-color:#111;
       
   }
 }
 
-.desktopTopBar .openMTB {
+.mobileTopBar .openMTB {
   display: block;
   height: 100%;
+  width: 2.8rem;
   float: right;
   transition-duration: 0.2s;
   cursor: pointer;
 }
 
-.desktopTopBar .openMTB:hover {
+.mobileTopBar .openMTB:hover {
   background: black;
 }
 
-.desktopTopBar .openMTB .hamburgerIconHolder {
+.mobileTopBar .openMTB .hamburgerIconHolder {
   display: block;
   height: 2.1875rem;
   padding-top: 0.575rem;
@@ -1030,4 +1399,5 @@ main {
   }
   
   }
+  
   

@@ -45,7 +45,17 @@
         </header>
 
 <main>
+<button type="button" value="test" name="test" onclick="arrtest()">testlmao</button>
 
+<script type="text/javascript">
+    const arr = [{name:"a", ooo:"hihi"},{name:"b", ooo:"huhu"},{name:"c", ooo:"hoho"}];
+function arrtest()
+{
+    var index = arr.map(function(g) { return g.name; }).indexOf('a');
+    arr.splice(index,1);
+    console.log(arr);
+}
+</script>
 </main>
 
 <aside>
