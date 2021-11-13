@@ -1,9 +1,13 @@
+@media screen and (min-width: 481px) 
+{
+
 body
 {
 	height: 100%;
 	margin: 0;
   /*background-color: #16085b;*/
-  background: #000080;
+ /* background: #000080; */
+  background:#fff; 
 }
 
 footer
@@ -24,13 +28,102 @@ main {
   height: 100%;
 }
 
+.whiteText {
+ color: #fff;
+}
+
+.blackText {
+  color: #000000;
+}
+
+.eleBlue {
+  background: #00E8FC;
+}
+
+.pastelBlue {
+  background:#256EFF;
+}
+
+.darkBlue {
+  background: #000080;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.justifyText {
+  text-align: justify;
+}
+
+.width50 {
+  width:50%;
+  max-width: 100%;
+}
+
+.width100 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.marginAuto {
+  margin: auto;
+}
+
+.arialSansSerif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.textSize1point5 {
+   font-size: 1.5rem;
+}
+
+.textSize6 {
+  font-size: 6rem;
+}
+.marginTopOne {
+  margin-top: 1em;
+}
+
+h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3rem;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
 .desktopTopBar
 {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background:#28282B;
+  /*background:#28282B;*/
+  background: #282A35;
   height: 100%;
   /*background-color: #333;*/
 }
@@ -45,6 +138,7 @@ main {
   display: block;
   color: white;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0.875rem 1rem;
   text-decoration: none;
   transition-duration: 0.2s;
@@ -85,16 +179,53 @@ aside
     border-collapse: collapse;
 }
 
-td
-{
-    border: 1px solid black;
-}
 
 td:hover {
-  background:#4169E1;
+  background: #00E8FC;
+  /*background:#4169E1; */
 }
 
+.kanaName {
+  font-size: 1.75rem;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+}
 
+.relAnchor {
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.openIB {
+  position: absolute;
+  background: #36454F;
+  color:white;
+  font-size: 8.75rem;
+  top: 15rem;
+  left: 4rem;
+  width:15rem;
+  height:15rem;
+  display:block;
+  border:none;
+  cursor:pointer;
+  transition-duration: 0.2s;
+  border-radius: 5%;
+}
+
+.openIB:hover {
+  background: #000000;
+}
+
+.infoWrapper {
+  width:50%;
+  margin: auto;
+}
 /*.grid-container
 {
     display:none;
@@ -112,7 +243,6 @@ td:hover {
     height:21.875rem;
     margin:auto;
     grid-template-columns: 1fr 1fr;
-    border: 2px solid red;
     grid-column-gap: 5%;
 }
 
@@ -123,7 +253,7 @@ td:hover {
 }
 
 .answerContainer {
-display: block;
+display: none;
 position: relative;
 width: 30rem;
 height: 30rem;
@@ -135,7 +265,7 @@ margin: auto;
     position: absolute;
     background-color:#256EFF;
     color:white;
-    font-size: 1.75rem;
+    font-size: 3rem;
     text-align: center;
     width: 15rem;
     height: 15rem;
@@ -159,7 +289,7 @@ margin: auto;
     position: absolute;
     color:white;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 3rem;
     left: 15.5rem;
     width: 15rem;
     height: 15rem;
@@ -181,7 +311,7 @@ margin: auto;
     position: absolute;
     color:white;  
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 3rem;
     top: 16rem;
     left: -0.5rem;
     width:15rem;
@@ -204,7 +334,7 @@ margin: auto;
     position: absolute;
     color:white;   
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 3rem;
     width: 15rem;
     height: 15rem;
     top: 16rem;
@@ -227,12 +357,10 @@ margin: auto;
 .BigCharacter
 {
     text-align:center;
-    font-size: 4.375rem;
-    background: black;
-    color:white;
+    font-size: 6rem;
+    color: #000000;
     margin:auto;
     width:25%;
-    border: 3px solid green;
 }
 
 .counter
@@ -521,7 +649,7 @@ margin: auto;
     height:15rem;
     width:15rem;
     float:left;
-    background:#00E8FC;
+    background: #36454F;
     transition-duration:0.2s;
     border-radius: 5%;
     margin-right: 1.5rem;
@@ -534,7 +662,7 @@ margin: auto;
 
 .infoButton
 {
-    background:#00E8FC;
+    background: #36454F;
     color:white;
     font-size: 8.75rem;
     font-family: "Times New Roman", serif;
@@ -557,7 +685,7 @@ margin: auto;
 /*#4361EE*/
 .button
 {
-    background: #00E8FC;
+    background: #36454F;
     color:white;
     font-size: 2.1875rem;
     text-align: center;
@@ -686,7 +814,7 @@ to {
   margin-top: 0.3rem;
 }
 
-
+}
 /* MOBILE*/
 
 
@@ -809,7 +937,7 @@ main {
   }
   
   .answerContainer {
-    display: block;
+    display: none;
     position: relative;
     width: 100%;
     height: 50%;
@@ -819,93 +947,90 @@ main {
     
     .button1
     {
-        background-color:#256EFF;
-        color:white;
-        font-size: 1.75rem;
-        text-align: center;
-        width: 50%;
-        height: 15rem;
-        display:inline-block;
-        border:none;
-        cursor:pointer;
-        transition-property: background-color, color;
-        transition-duration: 0.2s;
-        border-radius: 5%;
-        max-width:100%;
+      position: absolute;
+      background-color:#256EFF;
+      color:white;
+      font-size: 3rem;
+      text-align: center;
+      width: 45%;
+      height: 15rem;
+      left: 2.5%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-property: background-color, color;
+      transition-duration: 0.2s;
+      border-radius: 5%;
+      max-width: 100%;
     }
-    .button1:hover
-    {
-        background-color: #00E8FC;
-        color:white;
-    }
+
     .button2
     {
         
-        background-color:#256EFF;
-        color:white;
-        text-align: center;
-        font-size: 1.75rem;
-        width: 50%;
-        height: 15rem;
-        display:inline-block;
-        border:none;
-        cursor:pointer;
-        transition-property: background-color, color;
-        transition-duration: 0.2s;
-        border-radius: 5%;
-        max-width:100%;
-    }
-    .button2:hover
-    {
-        background-color: #00E8FC;
-        color:white;
+      background-color:#256EFF;
+      position: absolute;
+      color:white;
+      text-align: center;
+      font-size: 3rem;
+      left: 52.5%;
+      width: 45%;
+      height: 15rem;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-property: background-color, color;
+      transition-duration: 0.2s;
+      border-radius: 5%;
+      max-width: 100%;
     }
     .button3
     {
-        background-color:#256EFF;
-        color:white;  
-        text-align: center;
-        font-size: 1.75rem;
-        width:50%;
-        height: 15rem;
-        display:inline-block;
-        border:none;
-        cursor:pointer;
-        transition-property: background-color, color;
-        transition-duration: 0.2s;
-        border-radius: 5%;
-        max-width:100%;
+      background-color:#256EFF;
+      position: absolute;
+      color:white;  
+      text-align: center;
+      font-size: 3rem;
+      top: 16rem;
+      left: 2.5%;
+      width: 45%;
+      height: 15rem;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-property: background-color, color;
+      transition-duration: 0.2s;
+      border-radius: 5%;
+      max-width:100%;
     }
-    .button3:hover
-    {
-        background-color: #00E8FC;
-        color:white;
-    }
+
     .button4
     {
-        background-color:#256EFF;
-        color:white;   
-        text-align: center;
-        font-size: 1.75rem;
-        width: 50%;
-        height: 15rem;
-        display:inline-block;
-        border:none;
-        cursor:pointer;
-        transition-property: background-color, color;
-        transition-duration: 0.2s;
-        border-radius: 5%;
+      background-color:#256EFF;
+      position: absolute;
+      color:white;   
+      text-align: center;
+      font-size: 3rem;
+      width: 45%;
+      height: 15rem;
+      top: 16rem;
+      left: 52.5%;
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      transition-property: background-color, color;
+      transition-duration: 0.2s;
+      border-radius: 5%;
         max-width:100%;
     }
-    .button4:hover
-    {
-        background-color: #00E8FC;
-        color:white;
-    }
   
-  .active
+  .mobileTopBar .active
   {
-      background-color:#DE3C4B;
+      display:none;
+      float: left;
+      width: 100%;
+      max-width: 100%; 
+      background-color: #00E8FC;
+      color: black;
   }
   .active:hover
   {
@@ -913,14 +1038,26 @@ main {
       
   }
   
+  .mobileTopBar .active a 
+  {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    color: black;
+    text-align: center;
+    padding: 0.875rem 0 0.875rem 0;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
   .BigCharacter
   {
       text-align:center;
-      font-size: 4.375rem;
+      font-size: 8rem;
       color:white;
       margin:auto;
-      width:25%;
-      border: 3px solid green;
+      width: 100%;
+      max-width: 100%
   }
   
   .counter
@@ -1197,6 +1334,7 @@ main {
       width:75%;
       max-width: 100%;
       height:auto;
+      margin: auto;
       margin-top: 0;
   }
 .testSettingsButton
@@ -1278,6 +1416,7 @@ main {
     padding: 0;
     overflow: hidden;
     background-color: #28282B;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .mobileTopBar .mobileLI 
@@ -1362,15 +1501,15 @@ main {
 }
 
 .rightAnsCheck {
-  display:none;
+  display: none;
   position:absolute;
   border-radius:50%;
-  left: 40%;
-  top: 15vw;
-  width:16vw;
-  height:16vw;
+  top: 45%;
+  left: 11%;
+  width: 60%;
+  height: 60vw;
   z-index: 2;
-  border: 2vw solid green;
+  border: 9vw solid #0BDA51;
   transition-duration: 1s;
   }
   

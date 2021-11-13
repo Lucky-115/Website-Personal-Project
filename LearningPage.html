@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>A</title>
+<title>Learn Katakana and Hiragana</title>
 <link rel="icon" type="image/x-icon" href="favicon.png">
 <meta name="description" content="content" />
 <meta name="keywords" content="keywords" />
@@ -18,18 +18,24 @@
 
 
 <header>
-    <ul class="desktopTopBar">
+<ul class="desktopTopBar">
         <li><a href="HomePage.html">Home</a></li>
     
-<li><a class="active">Learn Characters</a></li>
+<li class="active"><a>Learn Characters</a></li>
     
 <li><a href="proba.html">Test Your Knowledge</a></li>
     
 <li><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
 <li><a href="InfoPage.html">More Info About Kana</a></li>
-<li class="settingsclass"><input type="image" src="mygear.png" id="settings"></li>
-    </ul>
+<li id="openMTB" class="openMTB">
+    <div class="hamburgerIconHolder">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+ </li>    
+</ul>
 
     <ul class="mobileTopBar">
         <li><a href="HomePage.html">Home</a></li>
@@ -47,11 +53,31 @@
 
 
 <main>
-<div class="BigCharacter" id="bigCharacter"></div>
-    </br>
-    </br>
+<div class="relAnchor">
+    <button class="openIB arialSansSerif centerText" onclick="openInfoBar()">?</button>
+</div>
+<div id="infoBar" class="SideBar">
+    <a href:"javascript:void(0)" class="CloseButton" onclick="closeInfoBar()">&times;</a>
+    <h1 class="whiteText centerText">Learning Kana with Kana Master</h1>
+    <div class="infoWrapper">
+    <p class="whiteText justifyText textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab harum repudiandae, corporis tempora perspiciatis, quod unde aliquid necessitatibus iste quos illo, animi est deleniti aperiam itaque quo. Dolorum unde incidunt praesentium facilis officiis quibusdam error, velit repellendus deleniti quae! Atque est provident saepe sint accusamus! Aperiam deleniti sapiente ullam dolor eveniet dolorum, officia ea iusto et explicabo ad, optio, voluptatem odit quibusdam deserunt eaque repudiandae. Ea iste error, ducimus tempora doloremque adipisci aperiam deleniti maiores minus sequi rem perspiciatis consequatur repellat rerum officia assumenda pariatur necessitatibus totam minima! Sint, facere ex! Eius cumque nisi quae? Eos ducimus eum quos.</p>
+    </div>
+</div>
+<script type="text/javascript">
+    function openInfoBar()
+    {
+        document.getElementById("infoBar").style.width = "100%";    
+    }    
+    function closeInfoBar() 
+    {
+      document.getElementById("infoBar").style.width = "0";
+    }
+</script>
+<div class="BigCharacter" id="bigCharacter">あ a</div>
     
 <div id="grid" class="grid-container1">
+<div class="kanaName">ひらがな / HIRAGANA</div>
+<div class="kanaName">カタカナ / KATAKANA</div>
 <table class="tables">
 <tr>
 <td id="a" >あ</td>
