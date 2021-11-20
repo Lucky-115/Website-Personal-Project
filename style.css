@@ -74,6 +74,11 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.japFont {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+
 .textSize1point5 {
    font-size: 1.5rem;
 }
@@ -90,6 +95,7 @@ h1 {
   font-size: 3rem;
   margin: auto;
   margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 h2 {
@@ -116,6 +122,15 @@ p {
   flex-direction: row;
 }
 
+.centerImg {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
 .desktopTopBar
 {
   list-style-type: none;
@@ -1516,10 +1531,10 @@ main {
   .wrongAnsCheck {
   display:none;
   position:absolute;
-  left: 40%;
-  top:15vw;
-  width:20vw;
-  height:20vw;
+  left: 11%;
+  top: 45%;
+  width: 80%;
+  height:80vw;
   z-index: 2;
   }
   
