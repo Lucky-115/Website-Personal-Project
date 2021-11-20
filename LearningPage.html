@@ -37,18 +37,26 @@
  </li>    
 </ul>
 
-    <ul class="mobileTopBar">
-        <li><a href="index.html">Home</a></li>
+<ul id="mobileTopBar" class="mobileTopBar">
+    <li id="openMTB" class="openMTB">
+        <div id="openTB" class="hamburgerIconHolder">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+     </li> 
+<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+<li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
     
-<li><a class="active">Learn Characters</a></li>
+<li id="li2" class="mobileLI active"><a href="LearningPage.html">Learn Characters</a></li>
     
-<li><a href="TestPage.html">Test Your Knowledge</a></li>
+<li id="li3" class="mobileLI"><a href="TestPage.html">Test Your Knowledge</a></li>
     
-<li><a href="HistoryTriviaPage.html">History of Kana</a></li>
+<li id="li4" class="mobileLI"><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
-<li><a href="InfoPage.html">More Info About Kana</a></li>
-<li class="settingsclass"><input type="image" src="mygear.png" id="settings"></li>
+<li id="li5" class="mobileLI"><a href="InfoPage.html">More Info About Kana</a></li>
     </ul>
+    <script type="text/javascript" src="mtbOpener.js"></script>
         </header>
 
 
@@ -239,8 +247,12 @@
 </table>
     
 </div>    
-
 <script type="text/javascript" src="TableDataChangeColor.js"></script>
+<div class="width100">
+    <button class="mobileOIB arialSansSerif centerText" onclick="openInfoBar()">?</button>
+</div>
+
+
 </main>
 
 
