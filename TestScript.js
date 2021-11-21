@@ -822,8 +822,6 @@ shuffle(answerPlacement);
 function correct() {
   if (questioncounter < maxQuestionCount)
     {
-document.getElementById("answerstatus").style.display= "block";
-document.getElementById("answerstatus").innerHTML= "Correct Answer!";
 document.getElementById("circle").style.display= "block";
 document.getElementById("circle").classList.add("fade-Out");
 setTimeout(removeRAC, 1000);
@@ -845,8 +843,6 @@ function incorrect()
 {
 if (questioncounter < maxQuestionCount)
     {
-document.getElementById("answerstatus").style.display= "block";
-document.getElementById("answerstatus").innerHTML= "Wrong Answer!";
 document.getElementById("cross").style.display= "block";
 document.getElementById("cross").classList.add("fade-Out");
 setTimeout(removeWAC, 1000);
