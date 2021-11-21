@@ -1699,7 +1699,7 @@ main {
 
 }
 
-@media screen and (min-width: 480.01px) and (max-width: 1023px) {
+@media screen and (min-width: 480.01px) and (max-width: 1023.99px) {
 
   body
   {
@@ -2360,13 +2360,13 @@ main {
 .testSettingsButton
   {
       display:block;
-      width: 50%;
+      width: 75%;
       max-width: 100%;
       height:auto;
       float: left;
       background:#145C9E;
       transition-duration:0.2s;
-      margin: 0 0 0 0;
+      margin: 1rem 12.5% 0 12.5%;
       border-radius: 5%;
   }
   
@@ -2391,7 +2391,7 @@ main {
       cursor:pointer;
       transition-duration: 0.2s;
       line-height: 100%;
-      margin: 1rem 0 0 0;
+      margin: 1rem 12.5% 0 12.5%;
       border-radius: 5%;
 }
   
@@ -2416,7 +2416,7 @@ main {
   border:none;
   cursor:pointer;
   transition-duration: 0.2s;
-  margin: 10% 0 0 0;
+  margin: 1rem 12.5% 0 12.5%;
   border-radius: 5%;
   }
 
@@ -2429,7 +2429,7 @@ main {
   .mobileTopBar 
   {
     display: block;
-    max-width: 100%;
+    width: 100%;
     max-width: 100%;
     list-style-type: none;
     margin: 0;
