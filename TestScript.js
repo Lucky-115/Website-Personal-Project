@@ -339,11 +339,7 @@ else if (document.getElementById("SetTestToKatakana").checked == true)
       }      
     }
   
-    
-    
-    
-    
-    
+
 else if (document.getElementById("SetTestRomajiToKana").checked == true)  {
            
 if (document.getElementById("SetTestToHiragana").checked == true)
@@ -363,20 +359,19 @@ document.getElementById("wynik").style.display="block";
   
   
   shuffle(dummy); //shuffles the array with fake/dummy answers
-  let DummyAnswerA = dummy[0].name //sets dummies to display fake answers, the dummies never overlap
-  let DummyAnswerB = dummy[1].name
-  let DummyAnswerC = dummy[2].name
-  
+  let DummyAnswerA = dummy[0].name; //sets dummies to display fake answers, the dummies never overlap
+  let DummyAnswerB = dummy[1].name;
+  let DummyAnswerC = dummy[2].name;
+
   if (DummyAnswerA == correctanswer) // checks if dummy equals the correct answer, if it does, picks a different value. the dummies here also don't overlap
   {
   DummyAnswerA = dummy[3].name;
   }
-  
   if (DummyAnswerB == correctanswer)
   {
   DummyAnswerB = dummy[4].name;
   }
-  
+
   if (DummyAnswerC == correctanswer)
   {
   DummyAnswerC = dummy[0].name;
@@ -387,11 +382,10 @@ document.getElementById("wynik").style.display="block";
       DummyAnswerC = dummy[1].name;
       }
       if (DummyAnswerC == DummyAnswerB) {
-        DummyAnswerC == dummy[4].name;
+        DummyAnswerC = dummy[4].name;
       }
   }
-  }
-  
+
   document.getElementById("option2").style.display="block";
   document.getElementById("option2").innerHTML= DummyAnswerA;
   
@@ -400,8 +394,7 @@ document.getElementById("wynik").style.display="block";
   
   document.getElementById("option4").style.display="block";
   document.getElementById("option4").innerHTML= DummyAnswerC;
-    
-    }
+    }    
 else if (document.getElementById("SetTestToKatakana").checked == true)
 {
         document.getElementById("start").style.display="none"; //button responsible for starting the test disappears
@@ -457,6 +450,7 @@ else if (document.getElementById("SetTestToKatakana").checked == true)
   document.getElementById("option4").style.display="block";
   document.getElementById("option4").innerHTML= DummyAnswerC; 
   }
+}
 
   shuffle(answerPlacement);
 
@@ -570,7 +564,7 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option3").innerHTML= DummyAnswerB; 
   document.getElementById("option4").innerHTML= DummyAnswerC;
 }
-}
+
   
   else if (questioncounter >= maxQuestionCount)
   {
@@ -580,8 +574,8 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option4").style.display="none";
   document.getElementById("answerstatus").innerHTML= "Your Score:";
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
-       }
-    }
+  }
+}
 else if (document.getElementById("SetTestToKatakana").checked == true)
     {
         var questionnumber = 0; //states questionnumber
@@ -598,7 +592,7 @@ questioncounter = (questioncounter + 1);
   
   if (questioncounter < maxQuestionCount)
   {
-  
+  console.log(katakana[0].name)
   document.getElementById("wynik").innerHTML= katakana[0].name; //sets the div.innerHTML to the 0th index of the array, which is now a different object because of shift()
   let correctanswer = katakana[0].odp;
   document.getElementById("option1").innerHTML= correctanswer;
@@ -648,7 +642,7 @@ questioncounter = (questioncounter + 1);
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
   }
 }
-
+}
 else if (document.getElementById("SetTestRomajiToKana").checked == true) { //checks if the test is set to romaji
    if (document.getElementById("SetTestToHiragana").checked == true) //checks if the user wants to take the test in hiragana or katakana
     {
@@ -705,7 +699,7 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option3").innerHTML= DummyAnswerB; 
   document.getElementById("option4").innerHTML= DummyAnswerC;
 }
-}
+
   
   else if (questioncounter >= maxQuestionCount)
   {
@@ -717,6 +711,7 @@ questioncounter = (questioncounter + 1);
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
        }
 }
+
 else if (document.getElementById("SetTestToKatakana").checked == true)
     {
         var questionnumber = 0; //states questionnumber
@@ -772,6 +767,7 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option3").innerHTML= DummyAnswerB; 
   document.getElementById("option4").innerHTML= DummyAnswerC;
  } 
+}
 }
 shuffle(answerPlacement);
 
