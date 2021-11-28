@@ -47,8 +47,30 @@
  </li>   
 </ul>
 
+<ul id="mobileTopBar" class="mobileTopBar">
+    <li id="openMTB" class="openMTB">
+        <div id="openTB" class="hamburgerIconHolder">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+     </li> 
+<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark1"></li>
+<li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
+    
+<li id="li2" class="mobileLI active"><a href="LearningPage.html">Learn Characters</a></li>
+    
+<li id="li3" class="mobileLI"><a href="TestPage.html">Test Your Knowledge</a></li>
+    
+<li id="li4" class="mobileLI"><a href="HistoryTriviaPage.html">History of Kana</a></li>
+    
+<li id="li5" class="mobileLI"><a href="InfoPage.html">More Info About Kana</a></li>
+    </ul>
+    <script type="text/javascript" src="mtbOpener.js"></script>
+
 <script type="text/javascript">
-    document.getElementById("dark").addEventListener("click", dark)
+    document.getElementById("dark").addEventListener("click", dark);
+    document.getElementById("dark1").addEventListener("click", dark);
     var darkON = "False";
     var darkON2;
     darkON2 = localStorage.getItem("darkVar");
@@ -74,27 +96,6 @@
         }
     }
 </script>
-
-<ul id="mobileTopBar" class="mobileTopBar">
-    <li id="openMTB" class="openMTB">
-        <div id="openTB" class="hamburgerIconHolder">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-     </li> 
-<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark"></li>
-<li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
-    
-<li id="li2" class="mobileLI active"><a href="LearningPage.html">Learn Characters</a></li>
-    
-<li id="li3" class="mobileLI"><a href="TestPage.html">Test Your Knowledge</a></li>
-    
-<li id="li4" class="mobileLI"><a href="HistoryTriviaPage.html">History of Kana</a></li>
-    
-<li id="li5" class="mobileLI"><a href="InfoPage.html">More Info About Kana</a></li>
-    </ul>
-    <script type="text/javascript" src="mtbOpener.js"></script>
         </header>
 
 
