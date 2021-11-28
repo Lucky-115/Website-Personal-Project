@@ -9,6 +9,22 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 <!--<link rel="stylesheet" media="screen and (max-width:480px)" href="styleMobile.css"/> -->
 <script type="text/javascript" src="TestScript.js"></script>
+<script type="text/javascript">
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function darkOnLoad()
+    {
+        if (darkON2 == "True") {
+        document.body.style.background="#202020";
+        document.getElementById("wynik").style.color="white";
+        document.getElementById("tryagain").style.color="white";
+        document.getElementById("textCongrats").classList.add("whiteText");
+        }
+        console.log("works");
+        console.log(darkON2);
+    }
+    window.onload = darkOnLoad;
+</script>
 
 </head>
 
@@ -24,15 +40,39 @@
 <li><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
 <li><a href="InfoPage.html">More Info About Kana</a></li>
- <li id="openMTB" class="openMTB">
-    <div class="hamburgerIconHolder">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-    </div>
+ <li style="float: right; cursor: pointer;">
+    <a id="dark">High Contrast Mode</a>
  </li>    
 </ul>
 
+<script type="text/javascript">
+    document.getElementById("dark").addEventListener("click", dark)
+    var darkON = "False";
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function dark() {
+        if (darkON2 == "False") {
+        document.body.style.background="#202020"
+        document.getElementById("wynik").style.color="white";
+        document.getElementById("tryagain").style.color="white";
+        document.getElementById("textCongrats").classList.add("whiteText");
+        darkON = "True";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        console.log(darkON2);
+        }
+        else if (darkON2 == "True")
+        {
+        document.body.style.background="#fff"
+        document.getElementById("wynik").style.color="black";
+        document.getElementById("tryagain").style.color="white";
+        document.getElementById("textCongrats").classList.remove("whiteText");
+        darkON = "False";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+    }
+</script>
 
 
 <ul id="mobileTopBar" class="mobileTopBar">
@@ -43,7 +83,7 @@
             <span class="line"></span>
         </div>
      </li> 
-<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark"></li>
 <li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
     
 <li id="li2" class="mobileLI"><a href="LearningPage.html">Learn Characters</a></li>
@@ -157,6 +197,8 @@ a = 0;
     <input type="checkbox" id="rowN" name="cRow" value="N"/>
     <span class="styledCheckbox"></span>
 </label>
+</br>
+</br>
 </div>    
 <script type="text/javascript">
     function dropdownCustomRows() {
@@ -225,7 +267,8 @@ for (var i=0;i<elems.length;i+=1){
 </script>
 <div id="infoBar" class="SideBar">
 <a href:"javascript:void(0)" class="CloseButton" onclick="closeInfoBar()">&times;</a>
-
+<h2 class="centerText width50 whiteText textSize1point5">Testing your knowledge of Kana characters</h2>
+<p class="justifyText width50 marginAuto arialSansSerif textSize1point5 whiteText">On this page, you can test your knowledge of Kana characters you've already learnt. The test is customizable to enhance Your experience. By clicking on the Gear button, you can open the customizability menu, where you can select from a variety of options. You can switch between Hiragana and Katakana by clicking on the corresponding buttons, as well as switching between Kana and the Latin Alphabet to display questions in. By clicking on the "Select Rows" Checkbox, you can choose which rows of characters exactly to practice. The test gives you four answer options. If you answer correcly, a green circle will appear on the screen, and a wrong answer will be marked by a red "X". Have fun testing your skills!</p>
 
 </div>
 <script type="text/javascript">
@@ -240,11 +283,34 @@ function closeSideBar() {
 </script>
     
     
+<div class="BigCharacter" id="wynik" style="display:none;"></div>
+</br>
+
+
+
+<!--<div id="grid" class="grid-container"> -->
+    <!--<div class="grid-child"> -->
+        <div class="answerContainer" id="answerContainer">
+            <button class="button1" style="display:none;" id="option1" onclick="losuj();correct()">Correct Answer</button>
+            <button class="button2" style="display:none;" id="option2" onclick="losuj();incorrect()">Wrong Answer</button>   
+            <button class="button3" style="display:none;" id="option3" onclick="losuj();incorrect()">Wrong Answer</button>
+            <button class="button4" style="display:none;" id="option4" onclick="losuj();incorrect()">Wrong Answer</button>
+            <!--</div> -->
+        </div>
+        
+    </br>
+</br>
+
+<section id="congrats" class="congrats">
+    <h1 class="centerText" id="textCongrats">Congratulations, You finished the test!</h1>
+</section>
+
+
 <div class="bigButtonContainer" id="bigButtonContainer">    
 <input type="image" src="mygearwhite.png" class="testSettingsButton" onclick="openSideBar()" id="TestSettingsOpen">
 <button class="button" id="start" onclick="start()">Start Test</button>
 <button class="infoButton" id="info" onclick="openInfoBar()">i</button>
-
+<button class="tryAgainButton" id="tryagain" onclick="tryAgain()">Try again</button>
 <script type="text/javascript">
 function openInfoBar()
 {
@@ -254,26 +320,12 @@ function closeInfoBar()
 {
   document.getElementById("infoBar").style.width = "0";
 }
+
+function tryAgain() {
+    location.reload();
+}
 </script>
 </div>
-<div class="BigCharacter" id="wynik" style="display:none;"></div>
-</br>
-
-
-
-<!--<div id="grid" class="grid-container"> -->
-    <!--<div class="grid-child"> -->
-<div class="answerContainer" id="answerContainer">
-    <button class="button1" style="display:none;" id="option1" onclick="losuj();correct()">Correct Answer</button>
-    <button class="button2" style="display:none;" id="option2" onclick="losuj();incorrect()">Wrong Answer</button>   
-    <button class="button3" style="display:none;" id="option3" onclick="losuj();incorrect()">Wrong Answer</button>
-    <button class="button4" style="display:none;" id="option4" onclick="losuj();incorrect()">Wrong Answer</button>
-    <!--</div> -->
-</div>
-    
-</br>
-</br>
-
 
 <div class="counter" id="CounterQuestion"></div>
 </main>
@@ -286,9 +338,7 @@ function closeInfoBar()
 </div>
 </div>
 
-<footer class="footer">
-aaaaaaaaaaaaaaaaaaaaaaaaa
-</footer>
+
 
 
 </body>

@@ -572,7 +572,6 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option2").style.display="none";
   document.getElementById("option3").style.display="none";
   document.getElementById("option4").style.display="none";
-  document.getElementById("answerstatus").innerHTML= "Your Score:";
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
   }
 }
@@ -638,7 +637,6 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option2").style.display="none";
   document.getElementById("option3").style.display="none";
   document.getElementById("option4").style.display="none";
-  document.getElementById("answerstatus").innerHTML= "Your Score:";
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
   }
 }
@@ -707,7 +705,6 @@ questioncounter = (questioncounter + 1);
   document.getElementById("option2").style.display="none";
   document.getElementById("option3").style.display="none";
   document.getElementById("option4").style.display="none";
-  document.getElementById("answerstatus").innerHTML= "Your Score:";
   document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
        }
 }
@@ -829,8 +826,10 @@ setTimeout(removeRAC, 1000);
     document.getElementById("option3").style.display="none";
     document.getElementById("option4").style.display="none";
     document.getElementById("answerContainer").style.display="none";
-    document.getElementById("answerstatus").innerHTML= "Your Score:";
-    document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
+    document.getElementById("wynik").style.display="none";
+    document.getElementById("bigButtonContainer").style.display="block";
+    document.getElementById("tryagain").style.display="block";
+    document.getElementById("congrats").style.display="block";
   }
 	
 }
@@ -850,8 +849,10 @@ setTimeout(removeWAC, 1000);
     document.getElementById("option3").style.display="none";
     document.getElementById("option4").style.display="none";
     document.getElementById("answerContainer").style.display="none";
-    document.getElementById("answerstatus").innerHTML= "Your Score:";
-    document.getElementById("wynik").innerHTML= "Congratulations, you finished the test!";
+    document.getElementById("wynik").style.display="none";
+    document.getElementById("congrats").style.display="block";
+    document.getElementById("bigButtonContainer").style.display="block";
+    document.getElementById("tryagain").style.display="block";
   }
 }
 

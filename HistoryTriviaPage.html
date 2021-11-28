@@ -8,6 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript" src="TestScript.js"></script>
+<script type="text/javascript">
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function darkOnLoad()
+    {
+        if (darkON2 == "True") {
+        document.body.style.background="#202020";
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        }
+    }
+    window.onload = darkOnLoad;
+</script>
 
 </head>
 
@@ -24,15 +38,39 @@
 <li class="active"><a>History of Kana</a></li>
     
 <li><a href="InfoPage.html">More Info About Kana</a></li>
-<li id="openMTB" class="openMTB">
-    <div class="hamburgerIconHolder">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-    </div>
- </li>
+<li style="float: right; cursor: pointer;">
+    <a id="dark">High Contrast Mode</a>
+ </li> 
 </ul>
-        
+
+<script type="text/javascript">
+    document.getElementById("dark").addEventListener("click", dark)
+    var darkON = "False";
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function dark() {
+        if (darkON2 == "False") {
+        document.body.style.background="#202020"
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        darkON = "True";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+        else if (darkON2 == "True")
+        {
+        document.body.style.background="#fff"
+        document.getElementById("section1").classList.remove("whiteText");
+        document.getElementById("section2").classList.remove("whiteText");
+        document.getElementById("section3").classList.remove("whiteText");
+        darkON = "False";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+    }
+</script>
+
 <ul id="mobileTopBar" class="mobileTopBar">
     <li id="openMTB" class="openMTB">
         <div id="openTB" class="hamburgerIconHolder">
@@ -41,7 +79,7 @@
             <span class="line"></span>
         </div>
      </li> 
-<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+<li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark"></li>
 <li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
     
 <li id="li2" class="mobileLI"><a href="LearningPage.html">Learn Characters</a></li>
@@ -57,35 +95,28 @@
         </header>
 
 <main>
-<section>
+<section id="section1">
     <h1 class="centerText marginTopOne textSize6">The History of Kana</h1>
 </section>
 
-<section>
+<section id="section3">
     <h1 class="centerText width50">Why should You Learn about the history of Kana?</h1>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum quis est laudantium illo eveniet voluptatum placeat! Dolore rem debitis est cupiditate officia optio, quas possimus id sequi ullam! Omnis reiciendis, laudantium eos ipsam nisi voluptas, libero repellat sunt distinctio blanditiis voluptate maiores animi repellendus explicabo adipisci ab reprehenderit? Eligendi laboriosam omnis illum quod quo cupiditate error similique quia, nesciunt officia aliquam minus ipsa perspiciatis in, voluptates culpa accusantium! Nihil quidem omnis quo, ratione at voluptates modi inventore harum facere beatae ad, dolorum incidunt, tempore vel rem nam dolores velit nisi repellat nemo necessitatibus accusantium! Odio deserunt placeat fugiat reprehenderit.</p>
+    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">The history of Kana is tied deeply into the history of Japan itself, as well as its rich culture. Learning about how it originated will help you understand it more and might spark an interest in the history of Japan. It’s also important to know how the system you’re writing in came to be, and it’s also a fun piece of trivia to know.</p>
 </section>
-
-<section>
-    <h1 class="centerText">Hiragana</h1>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eius non sapiente cumque obcaecati saepe perspiciatis animi. Quam qui rerum beatae deserunt dolorem eaque velit quisquam tempore doloribus ut. Voluptatem earum illum fuga nihil quis vel possimus quisquam repellendus. Consequatur dolore consequuntur asperiores eveniet excepturi, nobis eligendi! Possimus, beatae rerum laudantium sint illum sit quaerat amet architecto, nam et suscipit repellat numquam quia eius illo aut sequi eveniet fugit officiis velit! Iure iusto quam aut eos soluta. Saepe repellat asperiores amet voluptate nemo temporibus optio minima quasi vel quaerat molestias excepturi impedit ipsa velit, repudiandae non distinctio. Illo libero, doloribus amet ducimus quasi illum vero at impedit! Quo possimus impedit, excepturi, velit inventore similique dicta ipsum voluptatibus optio officiis modi necessitatibus voluptatum dignissimos blanditiis, vel cumque? Optio aspernatur molestias neque, soluta quis modi error aut ea animi id est, asperiores exercitationem nostrum pariatur reprehenderit reiciendis officia in fuga sapiente? Voluptatem id officiis architecto cupiditate nesciunt porro reprehenderit, perferendis natus inventore. Totam tenetur deserunt dolore laborum quisquam ratione nostrum aspernatur, id fugiat quis perferendis alias vero autem labore non quidem hic sunt quas cumque debitis illo facere. Ad veniam magni inventore eaque voluptas, laudantium at atque, laboriosam odit magnam sit! Omnis!</p>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum similique reiciendis neque minima omnis. Dolores minus nihil consequuntur explicabo! Rem, iste assumenda blanditiis perferendis non eos veniam commodi veritatis praesentium? Magnam reprehenderit rem quis, ipsa facere saepe amet optio qui sed perspiciatis voluptatum dolores hic quasi harum enim distinctio ex atque accusantium officia in exercitationem sunt aliquid laboriosam! Eligendi repellat corrupti debitis magnam ducimus aliquid vitae eaque sit quisquam, corporis cumque ratione ipsam nostrum commodi aspernatur eos dolore, amet quod deserunt mollitia quaerat ab, assumenda recusandae. Odio dignissimos accusantium voluptatum esse ex? Nisi unde dolor aut ducimus iusto nihil tenetur quod dolore hic asperiores? Nam animi quae adipisci reprehenderit doloribus eaque molestiae libero officia suscipit in quaerat natus cumque exercitationem accusantium voluptatum debitis harum impedit voluptatem veniam quo quam, aliquid nemo vitae aliquam! Dolor harum rerum repellendus libero, minima assumenda, consequatur quam inventore mollitia earum facere qui aliquam? Officia, autem temporibus voluptatibus modi perferendis impedit! Blanditiis incidunt expedita voluptatum fugit officia saepe, in tempora laborum dolorem sunt. Deserunt aut quos, repellat veniam corrupti sit facilis ipsam voluptatibus officia vitae modi fugit cum magni aliquam obcaecati laborum eveniet magnam beatae commodi quod dolores sed odio, porro assumenda! Nulla, dolore perspiciatis.</p>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga neque suscipit quas amet eius, tempore laboriosam eligendi, eaque sapiente ullam possimus corporis perferendis accusamus autem culpa accusantium porro voluptatum odit facilis expedita laudantium doloribus explicabo. Ab, necessitatibus suscipit consectetur similique corporis illo obcaecati facilis reprehenderit aliquam quisquam eius qui excepturi, placeat libero quia reiciendis quasi ea aut, tenetur vel omnis? Corrupti dolorum distinctio dolores, nobis inventore eum molestiae sapiente rem? Placeat ad quos delectus error? Alias, incidunt, voluptatem dicta ea modi repellendus dolor blanditiis dolores voluptates assumenda quod recusandae fugiat eaque tenetur nisi ratione optio, libero maxime excepturi provident veniam temporibus. At, debitis aliquam! Sit et numquam maiores repellat ipsum quisquam, repudiandae quo, mollitia rerum, sequi voluptatum necessitatibus voluptatibus expedita modi blanditiis. Tempore ipsa voluptatem ad minus quibusdam, praesentium doloribus reprehenderit, consequuntur quas debitis voluptatum libero nesciunt est. Odit nemo sit asperiores praesentium minus. Pariatur, delectus quam tempora doloribus hic dolore, minima nihil officia in enim rerum illo, distinctio officiis. Quis iste consequuntur provident odit fugiat veritatis sequi voluptates natus pariatur! Quisquam provident ducimus nostrum. Voluptatem expedita architecto enim tempora voluptatum dolor beatae obcaecati maiores, itaque sed. Fugit dolores unde sit temporibus veniam vel quidem consequatur perferendis. Ipsum, in!</p>
-    <img src="" alt="">
-</section>
-
-<section>
-    <h1 class="centerText">Katakana</h1>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eius non sapiente cumque obcaecati saepe perspiciatis animi. Quam qui rerum beatae deserunt dolorem eaque velit quisquam tempore doloribus ut. Voluptatem earum illum fuga nihil quis vel possimus quisquam repellendus. Consequatur dolore consequuntur asperiores eveniet excepturi, nobis eligendi! Possimus, beatae rerum laudantium sint illum sit quaerat amet architecto, nam et suscipit repellat numquam quia eius illo aut sequi eveniet fugit officiis velit! Iure iusto quam aut eos soluta. Saepe repellat asperiores amet voluptate nemo temporibus optio minima quasi vel quaerat molestias excepturi impedit ipsa velit, repudiandae non distinctio. Illo libero, doloribus amet ducimus quasi illum vero at impedit! Quo possimus impedit, excepturi, velit inventore similique dicta ipsum voluptatibus optio officiis modi necessitatibus voluptatum dignissimos blanditiis, vel cumque? Optio aspernatur molestias neque, soluta quis modi error aut ea animi id est, asperiores exercitationem nostrum pariatur reprehenderit reiciendis officia in fuga sapiente? Voluptatem id officiis architecto cupiditate nesciunt porro reprehenderit, perferendis natus inventore. Totam tenetur deserunt dolore laborum quisquam ratione nostrum aspernatur, id fugiat quis perferendis alias vero autem labore non quidem hic sunt quas cumque debitis illo facere. Ad veniam magni inventore eaque voluptas, laudantium at atque, laboriosam odit magnam sit! Omnis!</p>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum similique reiciendis neque minima omnis. Dolores minus nihil consequuntur explicabo! Rem, iste assumenda blanditiis perferendis non eos veniam commodi veritatis praesentium? Magnam reprehenderit rem quis, ipsa facere saepe amet optio qui sed perspiciatis voluptatum dolores hic quasi harum enim distinctio ex atque accusantium officia in exercitationem sunt aliquid laboriosam! Eligendi repellat corrupti debitis magnam ducimus aliquid vitae eaque sit quisquam, corporis cumque ratione ipsam nostrum commodi aspernatur eos dolore, amet quod deserunt mollitia quaerat ab, assumenda recusandae. Odio dignissimos accusantium voluptatum esse ex? Nisi unde dolor aut ducimus iusto nihil tenetur quod dolore hic asperiores? Nam animi quae adipisci reprehenderit doloribus eaque molestiae libero officia suscipit in quaerat natus cumque exercitationem accusantium voluptatum debitis harum impedit voluptatem veniam quo quam, aliquid nemo vitae aliquam! Dolor harum rerum repellendus libero, minima assumenda, consequatur quam inventore mollitia earum facere qui aliquam? Officia, autem temporibus voluptatibus modi perferendis impedit! Blanditiis incidunt expedita voluptatum fugit officia saepe, in tempora laborum dolorem sunt. Deserunt aut quos, repellat veniam corrupti sit facilis ipsam voluptatibus officia vitae modi fugit cum magni aliquam obcaecati laborum eveniet magnam beatae commodi quod dolores sed odio, porro assumenda! Nulla, dolore perspiciatis.</p>
-    <h2 class="centerText width50 marginTopOne">Lorem ipsum dolor sit amet.</h2>
-    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga neque suscipit quas amet eius, tempore laboriosam eligendi, eaque sapiente ullam possimus corporis perferendis accusamus autem culpa accusantium porro voluptatum odit facilis expedita laudantium doloribus explicabo. Ab, necessitatibus suscipit consectetur similique corporis illo obcaecati facilis reprehenderit aliquam quisquam eius qui excepturi, placeat libero quia reiciendis quasi ea aut, tenetur vel omnis? Corrupti dolorum distinctio dolores, nobis inventore eum molestiae sapiente rem? Placeat ad quos delectus error? Alias, incidunt, voluptatem dicta ea modi repellendus dolor blanditiis dolores voluptates assumenda quod recusandae fugiat eaque tenetur nisi ratione optio, libero maxime excepturi provident veniam temporibus. At, debitis aliquam! Sit et numquam maiores repellat ipsum quisquam, repudiandae quo, mollitia rerum, sequi voluptatum necessitatibus voluptatibus expedita modi blanditiis. Tempore ipsa voluptatem ad minus quibusdam, praesentium doloribus reprehenderit, consequuntur quas debitis voluptatum libero nesciunt est. Odit nemo sit asperiores praesentium minus. Pariatur, delectus quam tempora doloribus hic dolore, minima nihil officia in enim rerum illo, distinctio officiis. Quis iste consequuntur provident odit fugiat veritatis sequi voluptates natus pariatur! Quisquam provident ducimus nostrum. Voluptatem expedita architecto enim tempora voluptatum dolor beatae obcaecati maiores, itaque sed. Fugit dolores unde sit temporibus veniam vel quidem consequatur perferendis. Ipsum, in!</p>
-    <img src="" alt="">
+<section id="section2">
+    
+    <h1 class="centerText width50">The origin of Kana</h1>
+    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Hiragana and katakana evolved around the same period - the 10th century, and originated from simplifying (Hiragana) and abbreviating (Katakana) Chinese characters which were the only type of script used in Japan beforehand. Up to that moment, the Chinese Kanji characters were used for both their meaning and pronunciation, which created problems with writing in pure Japanese. Because of that, Manyougana was invented in the 7th century, then gradually evolved into Hiragana and Katakana. Manyougana used a small pool of Kanji characters purely for their sounds, not for their meanings, however they were still written as originally intended in their full forms.</p>
+    
+    <h2 class="centerText width50 japFont">Hiragana</h2>
+    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">The original Manyougana proved to be difficult to write and read for the Japanese, and as such was developed into Hiragana, which simplified the Chinese characters written in a cursive style into simple to write and easy to read ones. Here is a visual representation of Manyougana being transformed into Hiragana:</p>
+    <img class="marginAuto centerImg" src="manyouganaHira.png" alt="Table representing Manyougana being transformed into Hiragana">
+    <p class="leftText width50 marginAuto arialSansSerif">By Pmx - Own workCreated using the info from Image:Katakana origine.png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1561310</p>
+    
+    <h2 class="centerText width50 japFont">Katakana</h2>
+    <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Katakana, on the other hand, was created by buddhist monks around the same period by abbreviating Chinese characters to match Hiragana 1:1 in quantity. The monks simply took a Chinese character with a desired pronunciation, then separated a small part of it to represent the sound in Katakana. Here is a visual representation of Chinese characters being transformed into Katakana:</p>
+    <img class="marginAuto centerImg" src="manyougana.png" alt="Table representing Chinese characters being transformed into Katakana">
+    <p class="leftText width50 marginAuto arialSansSerif">By Pmx - Own workCreated using the info from Image:Katakana origine.png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1561310</p>
 </section>
 </main>
 
@@ -95,9 +126,7 @@
 
 
 
-<footer class="footer">
-aaaaaaaaaaaaaaaaaaaaaaaaa
-</footer>
+
 
 
 </body>

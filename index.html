@@ -9,7 +9,22 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 <!--<link rel="stylesheet" media="screen and (max-width:480px)" href="styleMobile.css"/> -->
 <script type="text/javascript" src="TestScript.js"></script>
-
+<script type="text/javascript">
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function darkOnLoad()
+    {
+        if (darkON2 == "True") {
+        document.body.style.background="#202020";
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        document.getElementById("section4").classList.add("whiteText");
+        document.getElementById("section5").classList.add("whiteText");
+        }
+    }
+    window.onload = darkOnLoad;
+</script>
 
 
 
@@ -27,7 +42,42 @@
 <li><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
 <li><a href="InfoPage.html">More Info About Kana</a></li>
-    </ul>
+<li style="float: right; cursor: pointer;">
+    <a id="dark">High Contrast Mode</a>
+ </li> 
+</ul>
+
+<script type="text/javascript">
+    document.getElementById("dark").addEventListener("click", dark)
+    var darkON = "False";
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function dark() {
+        if (darkON2 == "False") {
+        document.body.style.background="#202020"
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        document.getElementById("section4").classList.add("whiteText");
+        document.getElementById("section5").classList.add("whiteText");
+        darkON = "True";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+        else if (darkON2 == "True")
+        {
+        document.body.style.background="#fff"
+        document.getElementById("section1").classList.remove("whiteText");
+        document.getElementById("section2").classList.remove("whiteText");
+        document.getElementById("section3").classList.remove("whiteText");
+        document.getElementById("section4").classList.remove("whiteText");
+        document.getElementById("section5").classList.remove("whiteText");
+        darkON = "False";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+    }
+</script>
         
     <ul id="mobileTopBar" class="mobileTopBar">
         <li id="openMTB" class="openMTB">
@@ -37,7 +87,7 @@
                 <span class="line"></span>
             </div>
          </li> 
-    <li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+    <li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark"></li>
     <li id="li1" class="mobileLI active"><a href="index.html">Home</a></li>
         
     <li id="li2" class="mobileLI"><a href="LearningPage.html">Learn Characters</a></li>
@@ -52,26 +102,26 @@
         </header>
 
 <main>
-<section>
+<section id="section1">
     <h1 class="centerText">Welcome to Kana Master!</h1>
     <p class="centerText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, architecto?</p>
 </section>
 
-<section>
+<section id="section2">
     <h1 class="centerText">What is Kana Master?</h1>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed animi excepturi tempora dolore, nulla minus enim aliquid, amet, asperiores ex itaque inventore quis velit voluptate quisquam. Deleniti adipisci ipsum enim obcaecati suscipit assumenda quam eligendi cupiditate. Dolores, distinctio. Facilis!
     </p>
 </section>
 
-<section>
+<section id="section3">
     <h1 class="centerText">Why should You learn Kana?</h1>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aperiam soluta harum aut beatae nemo, nihil dolorem maxime perferendis delectus ullam magnam hic temporibus quia officia tempora est, repudiandae odit id vero deleniti blanditiis, aliquam reiciendis laudantium! Perspiciatis nulla, quia fuga, aliquid beatae optio nesciunt at eveniet explicabo quidem earum!</p>
 </section>
-<section>
+<section id="section4">
     <h1 class="centerText">Where to start?</h1>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis quia, similique mollitia necessitatibus aut! Modi, rem eveniet! Deserunt temporibus rem excepturi provident quisquam accusamus culpa totam, aliquam itaque maxime ullam officia quos earum dolorem eius dicta suscipit asperiores quis repellendus iure impedit odio necessitatibus! Ad esse praesentium ipsa cum.</p>
 </section>
-<section>
+<section id="section5">
     <h1 class="centerText">Good luck with learning!</h1>
 </section>
 
@@ -83,9 +133,7 @@
 
 
 
-<footer class="footer">
-aaaaaaaaaaaaaaaaaaaaaaaaa
-</footer>
+
 
 
 </body>

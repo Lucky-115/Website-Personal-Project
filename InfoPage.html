@@ -9,6 +9,23 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 <!--<link rel="stylesheet" media="screen and (max-width:480px)" href="styleMobile.css"/> -->
 <script type="text/javascript" src="TestScript.js"></script>
+<script type="text/javascript">
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function darkOnLoad()
+    {
+        if (darkON2 == "True") {
+        document.body.style.background="#202020";
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        document.getElementById("section4").classList.add("whiteText");
+        document.getElementById("section5").classList.add("whiteText");
+        document.getElementById("section6").classList.add("whiteText");
+        }
+    }
+    window.onload = darkOnLoad;
+</script>
 
 
 
@@ -27,7 +44,44 @@
 <li><a href="HistoryTriviaPage.html">History of Kana</a></li>
     
 <li class="active" ><a href="InfoPage.html">More Info About Kana</a></li>
-    </ul>
+<li style="float: right; cursor: pointer;">
+    <a id="dark">High Contrast Mode</a>
+ </li> 
+</ul>
+
+<script type="text/javascript">
+    document.getElementById("dark").addEventListener("click", dark)
+    var darkON = "False";
+    var darkON2;
+    darkON2 = localStorage.getItem("darkVar");
+    function dark() {
+        if (darkON2 == "False") {
+        document.body.style.background="#202020"
+        document.getElementById("section1").classList.add("whiteText");
+        document.getElementById("section2").classList.add("whiteText");
+        document.getElementById("section3").classList.add("whiteText");
+        document.getElementById("section4").classList.add("whiteText");
+        document.getElementById("section5").classList.add("whiteText");
+        document.getElementById("section6").classList.add("whiteText");
+        darkON = "True";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+        else if (darkON2 == "True")
+        {
+        document.body.style.background="#fff"
+        document.getElementById("section1").classList.remove("whiteText");
+        document.getElementById("section2").classList.remove("whiteText");
+        document.getElementById("section3").classList.remove("whiteText");
+        document.getElementById("section4").classList.remove("whiteText");
+        document.getElementById("section5").classList.remove("whiteText");
+        document.getElementById("section6").classList.remove("whiteText");
+        darkON = "False";
+        localStorage.setItem("darkVar", darkON);
+        darkON2 = localStorage.getItem("darkVar");
+        }
+    }
+</script>
         
     <ul id="mobileTopBar" class="mobileTopBar">
         <li id="openMTB" class="openMTB">
@@ -37,7 +91,7 @@
                 <span class="line"></span>
             </div>
          </li> 
-    <li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="settings"></li>
+    <li id="li6" class="settingsclass"><input type="image" src="mygearwhite.png" id="dark"></li>
     <li id="li1" class="mobileLI"><a href="index.html">Home</a></li>
         
     <li id="li2" class="mobileLI"><a href="LearningPage.html">Learn Characters</a></li>
@@ -52,12 +106,12 @@
         </header>
 
 <main>
-<section>
+<section id="section1">
     <h1 class="centerText">What is Kana?</h1>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Kana is the name for two of the three japanese alphabets, Katakana and Hiragana, the third being Kanji. Hiragana and Katakana function nearly the same as the Latin alphabet, they are syllabaries, i.e. characters contained in them represent sounds and do not have meanings of their own. Each one consists of 46 characters, each one corresponding to a unique open syllable, with the exception of “n”, which is also included in both. The Kana alphabets are organized into rows corresponding to the consonant at the start of the syllable (a, ka, sa, ta, na, ha, ma, ya, ra, wa, n) and columns corresponding to the vowel at the end (“a”,”i”,”u”,”e”,”o”), although the layouts may be different in some sources due to aesthetic choices.</p>
 </section>
 
-<section>
+<section id="section2">
     <h1 class="centerText">What's The Difference?</h1>
     <h2 class="centerText japFont width50">Hiragana and Katakana may seem similar due to the fact they work nearly identically, just with different characters for the same syllable, but their functions are completely different from each other.</h2>
     <div class="split width50 marginAuto">
@@ -72,7 +126,7 @@
     </div>
 </section>
 
-<section>
+<section id="section3">
     <h1 class="centerText">Voiced Consonants</h1>
     <h2 class="centerText width50 japFont">The Kana alphabets have a feature for voicing consonants - the "Dakuten", and one for producing the "P" sound - the "Handakuten".</h2>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">As You may have noticed after looking at the characters on the Learning Page, there are 11 rows of characters, each corresponding to a consonant (k, s, t, n, h, m, j (as in “ya”), r, w, n ) with the exception of the first row (a, i, u, e, o). However, the rows do not contain the consonants: “g”, “z”, “dʑ” (as in “judo / じゅうどう”), “d”, “b” and “p”. These consonants do not possess their own corresponding characters, but are rather created using one of two symbols added to a given character from the rows “ka”, “sa”, “ta”, and “ha”.</p>
@@ -96,19 +150,19 @@
 <img src="consonantP.png" class="marginAuto centerImg" alt="example of the 'P' consonant: 'ha' turns into 'pa' after adding the 'Handakuten' symbol to the top right corner">
 </section>
 
-<section>
+<section id="section4">
     <h1 class="centerText">Double Consonants</h1>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">In Hiragana and Katakana, we can write double consonants by adding a small “tsu” character, called a Sokuon, after the character we want to double. The “tsu” character comes from whichever alphabet the doubled sign is from, as shown below:</p>
     <img src="doubleconsonants.png" class="marginAuto centerImg" alt="natou -> nattou, bato -> battou">
 </section>
 
-<section>
+<section id="section5">
     <h1 class="centerText">Youon / Palatalization</h1>
     <h2 class="centerText width50 japFont">Or how to sound like a kawaii catgirl nya~</h2>
     <p class="justifyText width50 marginAuto arialSansSerif textSize1point5">Youon is a function of Kana in which a syllable ending in “i” is pronounced with an added “j” consonant (as in “ya”) and a vowel attached. This is accomplished by writing a small version of a character from the “ya” row next to a syllable ending with “i”. The small character comes from whichever alphabet the character before belongs to. This function can be combined with the aforementioned consonant voicing (dakuten and handakuten). Here is an example illustrating this:</p>
         <img src="Youon.png" class="marginAuto centerImg" alt="example of a softened syllable 'き'/'ki' is transformed into 'きゃ'/'kya' ">
 </section>
-<section>
+<section id="section6">
     <h1 class="centerText">Chouonpu / Prolonged Vowels</h1>
     <h2 class="centerText width50">Chouonpu / ちょうおんぷ is a function of Kana which allows us to write prolonged vowels. However, this time the way it is done is different for Hiragana and Katakana.</h2>
     <h2 class="centerText width50 japFont">Katakana</h2>
@@ -126,9 +180,7 @@
 
 
 
-<footer class="footer">
-aaaaaaaaaaaaaaaaaaaaaaaaa
-</footer>
+
 
 
 </body>
